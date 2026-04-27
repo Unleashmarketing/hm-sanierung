@@ -21,6 +21,21 @@
 
   gtag('config', 'AW-16711717313');
 </script>
+  <script>
+function gtagSendEvent(url) {
+  var callback = function () {
+    if (typeof url === 'string') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-16711717313/YT6CCI7o56McEMGj4qA-',
+    'event_callback': callback,
+    'event_timeout': 2000
+  });
+  return false;
+}
+</script>
 <!-- Schema.org LocalBusiness -->
 <script type="application/ld+json">
 {
