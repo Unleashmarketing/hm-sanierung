@@ -1042,17 +1042,6 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
 .faq-item summary:hover { color: var(--accent); }
 .faq-item .answer { padding: 0 4px 20px; }
 
-/* --- Floating CTAs: Safe-Area & Lesbarkeit --- */
-@media (max-width: 720px) {
-  .floating-ctas {
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    left: 12px;
-    right: 12px;
-  }
-  .floating-ctas .btn { min-height: 52px; }
-  body { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
-}
-
 /* --- Sektionsabstände auf Mobil straffen --- */
 @media (max-width: 720px) {
   section { padding: 48px 0; }
