@@ -156,6 +156,7 @@ section { padding: 72px 0; }
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
   text-decoration: none;
   font-family: inherit;
+  white-space: nowrap;
 }
 .btn-primary {
   background: var(--accent);
@@ -330,6 +331,7 @@ textarea { resize: vertical; min-height: 80px; }
   color: var(--text-muted);
   margin-top: 10px;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* ---------- Section titles ---------- */
@@ -369,7 +371,7 @@ textarea { resize: vertical; min-height: 80px; }
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   color: var(--text);
 }
@@ -385,8 +387,8 @@ textarea { resize: vertical; min-height: 80px; }
   font-weight: 800;
   color: var(--accent);
   border: 2px solid var(--accent);
-  margin-top: 2px;
 }
+.problem-list li div { white-space: nowrap; }
 .problem-card {
   background: var(--navy);
   color: #fff;
@@ -401,18 +403,20 @@ textarea { resize: vertical; min-height: 80px; }
 }
 .problem-card ul { list-style: none; padding: 0; }
 .problem-card ul li {
-  padding: 10px 0 10px 28px;
-  position: relative;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.12);
+  white-space: nowrap;
 }
 .problem-card ul li:last-child { border-bottom: none; }
 .problem-card ul li::before {
   content: "✓";
-  position: absolute;
-  left: 0;
   color: var(--accent);
   font-weight: 900;
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 /* ---------- 3 Steps ---------- */
@@ -719,6 +723,7 @@ textarea { resize: vertical; min-height: 80px; }
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 .map-meta .addr svg { width: 18px; height: 18px; stroke: var(--accent); stroke-width: 2; fill: none; flex-shrink: 0; }
 .map-meta .addr strong { font-weight: 800; margin-right: 6px; }
@@ -838,6 +843,7 @@ textarea { resize: vertical; min-height: 80px; }
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid var(--border);
+  white-space: nowrap;
 }
 .ba-hint .icon { width: 16px; height: 16px; stroke: var(--accent); }
 @keyframes ba-nudge {
