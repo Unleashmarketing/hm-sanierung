@@ -9,12 +9,21 @@ export const Route = createFileRoute("/entruempelung/agb")({
   head: () => ({
     meta: [
       { title: "Allgemeine Gesch\u00e4ftsbedingungen \u00b7 HeinzelM\u00e4nner" },
-      { name: "description", content: "" },
+      {
+        name: "description",
+        content:
+          "Allgemeine Gesch\u00e4ftsbedingungen der HeinzelM\u00e4nner GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Angebot, Festpreis, Termine, Zahlung, Haftung und Widerruf.",
+      },
       { property: "og:title", content: "Allgemeine Gesch\u00e4ftsbedingungen \u00b7 HeinzelM\u00e4nner" },
-      { property: "og:description", content: "" },
+      {
+        property: "og:description",
+        content:
+          "AGB der HeinzelM\u00e4nner GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Festpreis, Termine, Zahlung, Haftung und Widerruf.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://hm-sanierung.com/entruempelung/agb" }],
   }),
   component: Page,
 });

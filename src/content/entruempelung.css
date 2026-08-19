@@ -265,7 +265,7 @@ section { padding: 72px 0; }
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
-.hero-card h3 {
+.hero-card h2, .hero-card h3 {
   font-size: 1.35rem;
   margin-bottom: 6px;
 }

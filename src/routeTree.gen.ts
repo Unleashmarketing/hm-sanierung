@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EntruempelungIndexRouteImport } from './routes/entruempelung/index'
 import { Route as EntruempelungAgbRouteImport } from './routes/entruempelung/agb'
 import { Route as EntruempelungDatenschutzRouteImport } from './routes/entruempelung/datenschutz'
@@ -18,6 +19,11 @@ import { Route as EntruempelungImpressumRouteImport } from './routes/entruempelu
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EntruempelungIndexRoute = EntruempelungIndexRouteImport.update({
@@ -44,6 +50,7 @@ const EntruempelungImpressumRoute = EntruempelungImpressumRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
   '/entruempelung/impressum': typeof EntruempelungImpressumRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
   '/entruempelung/impressum': typeof EntruempelungImpressumRoute
@@ -59,6 +67,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
   '/entruempelung/impressum': typeof EntruempelungImpressumRoute
@@ -68,6 +77,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
     | '/entruempelung/impressum'
@@ -75,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
     | '/entruempelung/impressum'
@@ -82,6 +93,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
     | '/entruempelung/impressum'
@@ -90,6 +102,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   EntruempelungAgbRoute: typeof EntruempelungAgbRoute
   EntruempelungDatenschutzRoute: typeof EntruempelungDatenschutzRoute
   EntruempelungImpressumRoute: typeof EntruempelungImpressumRoute
@@ -103,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/entruempelung/': {
@@ -138,6 +158,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   EntruempelungAgbRoute: EntruempelungAgbRoute,
   EntruempelungDatenschutzRoute: EntruempelungDatenschutzRoute,
   EntruempelungImpressumRoute: EntruempelungImpressumRoute,
