@@ -10,33 +10,90 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EntruempelungIndexRouteImport } from './routes/entruempelung/index'
+import { Route as EntruempelungAgbRouteImport } from './routes/entruempelung/agb'
+import { Route as EntruempelungDatenschutzRouteImport } from './routes/entruempelung/datenschutz'
+import { Route as EntruempelungImpressumRouteImport } from './routes/entruempelung/impressum'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EntruempelungIndexRoute = EntruempelungIndexRouteImport.update({
+  id: '/entruempelung/',
+  path: '/entruempelung/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntruempelungAgbRoute = EntruempelungAgbRouteImport.update({
+  id: '/entruempelung/agb',
+  path: '/entruempelung/agb',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntruempelungDatenschutzRoute =
+  EntruempelungDatenschutzRouteImport.update({
+    id: '/entruempelung/datenschutz',
+    path: '/entruempelung/datenschutz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const EntruempelungImpressumRoute = EntruempelungImpressumRouteImport.update({
+  id: '/entruempelung/impressum',
+  path: '/entruempelung/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/entruempelung/agb': typeof EntruempelungAgbRoute
+  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
+  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
+  '/entruempelung/': typeof EntruempelungIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/entruempelung/agb': typeof EntruempelungAgbRoute
+  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
+  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
+  '/entruempelung': typeof EntruempelungIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/entruempelung/agb': typeof EntruempelungAgbRoute
+  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
+  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
+  '/entruempelung/': typeof EntruempelungIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/entruempelung/agb'
+    | '/entruempelung/datenschutz'
+    | '/entruempelung/impressum'
+    | '/entruempelung/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/entruempelung/agb'
+    | '/entruempelung/datenschutz'
+    | '/entruempelung/impressum'
+    | '/entruempelung'
+  id:
+    | '__root__'
+    | '/'
+    | '/entruempelung/agb'
+    | '/entruempelung/datenschutz'
+    | '/entruempelung/impressum'
+    | '/entruempelung/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EntruempelungAgbRoute: typeof EntruempelungAgbRoute
+  EntruempelungDatenschutzRoute: typeof EntruempelungDatenschutzRoute
+  EntruempelungImpressumRoute: typeof EntruempelungImpressumRoute
+  EntruempelungIndexRoute: typeof EntruempelungIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +105,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/entruempelung/': {
+      id: '/entruempelung/'
+      path: '/entruempelung'
+      fullPath: '/entruempelung/'
+      preLoaderRoute: typeof EntruempelungIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entruempelung/agb': {
+      id: '/entruempelung/agb'
+      path: '/entruempelung/agb'
+      fullPath: '/entruempelung/agb'
+      preLoaderRoute: typeof EntruempelungAgbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entruempelung/datenschutz': {
+      id: '/entruempelung/datenschutz'
+      path: '/entruempelung/datenschutz'
+      fullPath: '/entruempelung/datenschutz'
+      preLoaderRoute: typeof EntruempelungDatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entruempelung/impressum': {
+      id: '/entruempelung/impressum'
+      path: '/entruempelung/impressum'
+      fullPath: '/entruempelung/impressum'
+      preLoaderRoute: typeof EntruempelungImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EntruempelungAgbRoute: EntruempelungAgbRoute,
+  EntruempelungDatenschutzRoute: EntruempelungDatenschutzRoute,
+  EntruempelungImpressumRoute: EntruempelungImpressumRoute,
+  EntruempelungIndexRoute: EntruempelungIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
