@@ -5,7 +5,7 @@ import css from "@/content/entruempelung.css?raw";
 import js from "@/content/entruempelung.js?raw";
 import ld from "@/content/entruempelung.ld.json";
 
-export const Route = createFileRoute("/entruempelung")({
+export const Route = createFileRoute("/entruempelung/")({
   head: () => ({
     meta: [
       { title: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HeinzelM\u00e4nner" },
