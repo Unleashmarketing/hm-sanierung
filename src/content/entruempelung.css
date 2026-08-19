@@ -156,6 +156,7 @@ section { padding: 72px 0; }
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
   text-decoration: none;
   font-family: inherit;
+  white-space: nowrap;
 }
 .btn-primary {
   background: var(--accent);
@@ -330,6 +331,7 @@ textarea { resize: vertical; min-height: 80px; }
   color: var(--text-muted);
   margin-top: 10px;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* ---------- Section titles ---------- */
@@ -719,6 +721,7 @@ textarea { resize: vertical; min-height: 80px; }
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 .map-meta .addr svg { width: 18px; height: 18px; stroke: var(--accent); stroke-width: 2; fill: none; flex-shrink: 0; }
 .map-meta .addr strong { font-weight: 800; margin-right: 6px; }
@@ -838,6 +841,7 @@ textarea { resize: vertical; min-height: 80px; }
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid var(--border);
+  white-space: nowrap;
 }
 .ba-hint .icon { width: 16px; height: 16px; stroke: var(--accent); }
 @keyframes ba-nudge {
