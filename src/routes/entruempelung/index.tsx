@@ -9,12 +9,21 @@ export const Route = createFileRoute("/entruempelung/")({
   head: () => ({
     meta: [
       { title: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HeinzelM\u00e4nner" },
-      { name: "description", content: "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis. Festpreis binnen 24 Stunden, besenrein garantiert. 45 Mitar" },
+      {
+        name: "description",
+        content:
+          "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis: Festpreis binnen 24 Stunden, besenrein garantiert, versichert und mit eigenem Team.",
+      },
       { property: "og:title", content: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HeinzelM\u00e4nner" },
-      { property: "og:description", content: "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis. Festpreis binnen 24 Stunden, besenrein garantiert. 45 Mitar" },
+      {
+        property: "og:description",
+        content:
+          "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis: Festpreis binnen 24 Stunden, besenrein garantiert, versichert und mit eigenem Team.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://hm-sanierung.com/entruempelung" }],
   }),
   component: Page,
 });
