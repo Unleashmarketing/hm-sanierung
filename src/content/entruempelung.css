@@ -303,6 +303,28 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(247,127,0,0.15);
 }
 textarea { resize: vertical; min-height: 80px; }
+.hero-card-alts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.hero-card-alts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--navy);
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.hero-card-alts a:hover { color: var(--accent); }
+.hero-card-alts .icon { width: 16px; height: 16px; stroke-width: 2.2; }
 .form-note {
   font-size: 0.8rem;
   color: var(--text-muted);
