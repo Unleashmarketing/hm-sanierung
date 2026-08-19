@@ -1081,3 +1081,14 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
     transition-duration: 0.001ms !important;
   }
 }
+
+/* --- Floating CTAs: Safe-Area & Lesbarkeit --- */
+@media (max-width: 720px) {
+  .floating-ctas {
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: 12px;
+    right: 12px;
+  }
+  .floating-ctas .btn { min-height: 52px; }
+  body { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+}
