@@ -81,15 +81,22 @@ section{padding:96px 0; position:relative}
 }
 .nav-inner{
   max-width:var(--max); margin:0 auto; padding:0 var(--gutter);
-  display:flex; justify-content:space-between; align-items:center; gap:24px;
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:24px;
 }
-.logo{display:flex; align-items:center; gap:10px}
-.logo-img{height:44px; width:auto}
-.nav-links{display:flex; gap:32px; font-size:0.88rem; font-weight:500}
+.logo{display:flex; align-items:center; gap:12px; text-decoration:none}
+.logo-img{height:54px; width:auto}
+.logo-text{
+  font-family:var(--heading); font-size:1.5rem; font-weight:700;
+  color:var(--ink); letter-spacing:-0.02em; line-height:1; margin:0
+}
+.nav-links{display:flex; gap:32px; font-size:0.88rem; font-weight:500; justify-content:center}
 .nav-links a{color:var(--ink); padding:4px 0; transition:color 0.2s}
 .nav-links a:hover{color:var(--accent)}
-@media(max-width:980px){.nav-links{display:none}}
-.nav-right{display:flex; align-items:center; gap:14px}
+@media(max-width:980px){
+  .nav-links{display:none}
+  .nav-inner{grid-template-columns:auto 1fr; justify-content:space-between}
+}
+.nav-right{display:flex; align-items:center; gap:14px; justify-self:end}
 .nav-phone{
   font-size:0.88rem; font-weight:600;
   display:flex; align-items:center; gap:6px; color:var(--ink);
