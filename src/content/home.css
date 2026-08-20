@@ -108,10 +108,10 @@ section{padding:96px 0; position:relative}
 .nav-drop:focus-within .nav-drop-trigger svg{transform:rotate(180deg)}
 .nav-drop-panel{
   position:absolute; top:calc(100% + 14px); left:50%; transform:translate(-50%,6px);
-  min-width:300px; padding:10px;
+  min-width:280px; padding:8px;
   background:#fff; border:1px solid var(--line); border-radius:16px;
   box-shadow:0 22px 50px rgba(0,0,0,0.12);
-  display:grid; gap:8px;
+  display:grid; gap:4px;
   opacity:0; visibility:hidden; pointer-events:none;
   transition:opacity .2s, transform .2s, visibility .2s;
   z-index:70;
@@ -119,20 +119,23 @@ section{padding:96px 0; position:relative}
 .nav-drop-panel::before{content:""; position:absolute; left:0; right:0; top:-14px; height:14px}
 .nav-drop:hover .nav-drop-panel,
 .nav-drop:focus-within .nav-drop-panel{opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0)}
-.nav-drop-card{
-  position:relative; display:block; padding:14px 42px 14px 16px;
-  border:1px solid var(--line); border-radius:12px; background:var(--paper);
-  transition:border-color .2s, background .2s, transform .2s;
+.nav-drop-link{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; padding:14px 16px;
+  border-radius:12px; color:var(--ink);
+  transition:background .2s, color .2s;
 }
-.nav-drop-card:hover{border-color:var(--accent); background:var(--accent-soft); transform:translateY(-2px)}
-.ndc-title{display:block; font-family:var(--heading); font-size:0.98rem; font-weight:700; letter-spacing:-0.02em; color:var(--ink)}
-.ndc-sub{display:block; font-size:0.8rem; color:var(--muted); line-height:1.4; margin-top:3px; white-space:normal}
-.ndc-arrow{
-  position:absolute; top:16px; right:14px; width:16px; height:16px;
-  stroke:var(--accent); stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;
+.nav-drop-link:hover{background:var(--accent-soft); color:var(--accent)}
+.ndl-meta{display:flex; flex-direction:column; gap:2px}
+.ndl-label{display:block; font-family:var(--heading); font-size:0.98rem; font-weight:700; letter-spacing:-0.02em; line-height:1.2}
+.ndl-desc{display:block; font-size:0.8rem; color:var(--muted); line-height:1.4; white-space:normal; transition:color .2s}
+.nav-drop-link:hover .ndl-desc{color:var(--accent)}
+.ndl-arrow{
+  width:20px; height:20px; flex-shrink:0;
+  stroke:var(--accent); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round;
   transition:transform .2s;
 }
-.nav-drop-card:hover .ndc-arrow{transform:translate(2px,-2px)}
+.nav-drop-link:hover .ndl-arrow{transform:translate(3px,-3px)}
 
 .nav-mobile-only{display:none !important}
 .nav-burger{display:none}
@@ -182,7 +185,7 @@ section{padding:96px 0; position:relative}
     min-width:0; box-shadow:none; border:none; padding:0 0 4px; background:transparent;
   }
   .nav-drop-panel::before{display:none}
-  .nav-drop-card{padding:12px 42px 12px 14px}
+  .nav-drop-link{padding:12px 14px}
   .nav-mobile-only{display:block}
   .nav-links .btn{justify-content:center; margin-top:6px}
 }
