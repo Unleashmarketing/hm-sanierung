@@ -89,12 +89,28 @@ section{padding:96px 0; position:relative}
   font-family:var(--heading); font-size:1.5rem; font-weight:700;
   color:var(--ink); letter-spacing:-0.02em; line-height:1; margin:0
 }
-.nav-links{display:flex; gap:32px; font-size:0.88rem; font-weight:500; justify-content:center}
+.nav-links{display:flex; gap:clamp(14px,2vw,32px); font-size:0.88rem; font-weight:500; justify-content:center; min-width:0; flex-wrap:nowrap}
 .nav-links a{color:var(--ink); padding:4px 0; transition:color 0.2s}
 .nav-links a:hover{color:var(--accent)}
-.nav-mobile-only{display:none}
+.nav-links a{white-space:nowrap}
+.nav-mobile-only{display:none !important}
 .nav-burger{display:none}
+@media(min-width:981px){
+  .nav-inner{gap:clamp(16px,3vw,40px)}
+  .logo{min-width:0}
+  .logo-img{height:44px}
+  .logo-text{font-size:1.25rem; white-space:nowrap}
+  .nav-right{gap:12px}
+  .nav-phone{white-space:nowrap}
+}
+@media(min-width:981px) and (max-width:1200px){
+  .nav-links{font-size:0.82rem}
+  .logo-text{font-size:1.05rem}
+  .nav-phone{display:none}
+}
 @media(max-width:980px){
+  .nav-links .nav-mobile-only{display:block !important}
+  .nav-links .btn.nav-mobile-only{display:inline-flex !important}
   .nav-inner{grid-template-columns:minmax(0,1fr) auto; gap:12px; position:relative}
   .logo{min-width:0}
   .logo-img{height:40px}
