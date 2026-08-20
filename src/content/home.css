@@ -185,7 +185,7 @@ section{padding:96px 0; position:relative}
     min-width:0; box-shadow:none; border:none; padding:0 0 4px; background:transparent;
   }
   .nav-drop-panel::before{display:none}
-  .nav-drop-card{padding:12px 42px 12px 14px}
+  .nav-drop-link{padding:12px 14px}
   .nav-mobile-only{display:block}
   .nav-links .btn{justify-content:center; margin-top:6px}
 }
