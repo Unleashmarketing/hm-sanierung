@@ -120,7 +120,7 @@ section{padding:96px 0; position:relative}
 .nav-drop:hover .nav-drop-panel,
 .nav-drop:focus-within .nav-drop-panel{opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0)}
 .nav-drop-link{
-  display:block; padding:14px 16px;
+  display:block; padding:20px 22px;
   border-radius:12px; color:var(--ink);
   transition:background .2s, color .2s;
 }
