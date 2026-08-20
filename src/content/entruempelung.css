@@ -88,11 +88,11 @@ section { padding: 72px 0; }
   letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .logo-mark {
-  width: 63px;
-  height: 63px;
+  width: 78px;
+  height: 78px;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
@@ -103,6 +103,15 @@ section { padding: 72px 0; }
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.logo-text {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
 }
 .logo-sub {
   font-size: 0.72rem;
@@ -216,11 +225,16 @@ section { padding: 72px 0; }
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.hero h1 {
+.hero-title, .hero h1, .hero h2 {
   margin-bottom: 20px;
   color: var(--navy);
+  font-family: var(--heading);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
-.hero h1 em {
+.hero-title em, .hero h1 em, .hero h2 em {
   font-style: normal;
   color: var(--accent);
 }
