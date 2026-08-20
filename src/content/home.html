@@ -24,7 +24,19 @@
     </a>
     <input type="checkbox" id="navToggle" class="nav-toggle" hidden>
     <div class="nav-links">
-      <a href="#leistungen">Leistungen</a>
+      <div class="nav-drop">
+        <button type="button" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+          Leistungen
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav-drop-panel">
+          <a class="nav-drop-card" href="/entruempelung">
+            <span class="ndc-title">Entrümpelung</span>
+            <span class="ndc-sub">Festpreis, besenrein, in 24–48 h vor Ort</span>
+            <svg class="ndc-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
       <a href="#projekte">Referenzen</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#preise">Preise</a>
