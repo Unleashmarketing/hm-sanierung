@@ -120,22 +120,15 @@ section{padding:96px 0; position:relative}
 .nav-drop:hover .nav-drop-panel,
 .nav-drop:focus-within .nav-drop-panel{opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0)}
 .nav-drop-link{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:14px; padding:14px 16px;
+  display:block; padding:14px 16px;
   border-radius:12px; color:var(--ink);
   transition:background .2s, color .2s;
 }
 .nav-drop-link:hover{background:var(--accent-soft); color:var(--accent)}
-.ndl-meta{display:flex; flex-direction:column; gap:2px}
+.ndl-meta{display:flex; flex-direction:column; gap:4px}
 .ndl-label{display:block; font-family:var(--heading); font-size:0.98rem; font-weight:700; letter-spacing:-0.02em; line-height:1.2}
-.ndl-desc{display:block; font-size:0.8rem; color:var(--muted); line-height:1.4; white-space:normal; transition:color .2s}
+.ndl-desc{display:block; font-size:0.84rem; color:var(--muted); line-height:1.45; white-space:normal; transition:color .2s}
 .nav-drop-link:hover .ndl-desc{color:var(--accent)}
-.ndl-arrow{
-  width:20px; height:20px; flex-shrink:0;
-  stroke:var(--accent); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round;
-  transition:transform .2s;
-}
-.nav-drop-link:hover .ndl-arrow{transform:translate(3px,-3px)}
 
 .nav-mobile-only{display:none !important}
 .nav-burger{display:none}
