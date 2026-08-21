@@ -68,3 +68,66 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   slider.addEventListener('input',update);
   update();
 })();
+
+// Projects slider
+(function(){
+  const slider = document.querySelector('.proj-slider');
+  const grid = document.querySelector('.proj-grid');
+  const dotsWrap = document.querySelector('.proj-dots');
+  const prevBtn = document.querySelector('.proj-prev');
+  const nextBtn = document.querySelector('.proj-next');
+  if(!slider || !grid || !dotsWrap) return;
+  const cards = Array.from(grid.querySelectorAll('.proj-card'));
+  if(cards.length <= 1){ if(prevBtn) prevBtn.style.display='none'; if(nextBtn) nextBtn.style.display='none'; return; }
+
+  let current = 0;
+  let isMobile = window.matchMedia('(max-width:640px)').matches;
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    cards.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'proj-dot' + (i === 0 ? ' active' : '');
+      b.setAttribute('aria-label', 'Projekt ' + (i + 1));
+      b.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(b);
+    });
+  }
+
+  function updateActive(){
+    dotsWrap.querySelectorAll('.proj-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function goTo(i){
+    current = Math.max(0, Math.min(cards.length - 1, i));
+    if(isMobile){
+      const cardWidth = cards[0].offsetWidth;
+      grid.scrollTo({ left: current * cardWidth, behavior: 'smooth' });
+    }
+    updateActive();
+  }
+
+  function next(){ goTo((current + 1) % cards.length); }
+  function prev(){ goTo((current - 1 + cards.length) % cards.length); }
+
+  if(prevBtn) prevBtn.addEventListener('click', prev);
+  if(nextBtn) nextBtn.addEventListener('click', next);
+
+  let scrollTimeout;
+  grid.addEventListener('scroll', () => {
+    if(!isMobile) return;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const cardWidth = cards[0].offsetWidth || grid.offsetWidth;
+      current = Math.round(grid.scrollLeft / cardWidth);
+      updateActive();
+    }, 80);
+  }, {passive:true});
+
+  window.addEventListener('resize', () => {
+    isMobile = window.matchMedia('(max-width:640px)').matches;
+  }, {passive:true});
+
+  buildDots();
+})();
