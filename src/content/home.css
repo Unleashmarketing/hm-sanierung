@@ -371,7 +371,17 @@ section{padding:96px 0; position:relative}
 /* ============ PROJECTS — 4 columns ============ */
 .proj-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px}
 @media(max-width:980px){.proj-grid{grid-template-columns:repeat(2, 1fr)}}
-@media(max-width:540px){.proj-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .proj-grid{
+    display:flex; grid-template-columns:none;
+    gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding:2px var(--gutter) 14px; margin:0 calc(var(--gutter) * -1);
+    scrollbar-width:none;
+  }
+  .proj-grid::-webkit-scrollbar{display:none}
+  .proj-grid .proj-card{flex:0 0 78%; scroll-snap-align:center}
+}
 .proj-card{
   position:relative; border-radius:12px; overflow:hidden;
   aspect-ratio:1; background:var(--line);
