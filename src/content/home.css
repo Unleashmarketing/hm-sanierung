@@ -267,6 +267,10 @@ section{padding:96px 0; position:relative}
 .hero-lede{font-size:1.02rem; color:var(--muted); line-height:1.6; max-width:48ch; margin-bottom:28px}
 .hero-lede strong{color:var(--ink); font-weight:600}
 .hero-actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+@media(max-width:640px){
+  .hero-actions{flex-direction:column; align-items:stretch; gap:10px}
+  .hero-actions .btn{width:100%; justify-content:center; min-height:52px; padding:0 20px}
+}
 
 /* Hero image — crossfade */
 .hero-visual{
