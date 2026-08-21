@@ -432,7 +432,10 @@ section{padding:96px 0; position:relative}
 }
 .proj-dot.active{background:var(--accent); transform:scale(1.2)}
 @media(max-width:640px){
-  .proj-dots{display:flex}
+  .proj-dots{
+    display:flex; position:absolute; top:0; left:0; right:0;
+    margin-top:0;
+  }
   .proj-slider{padding-bottom:8px}
 }
 
