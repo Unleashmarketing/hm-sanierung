@@ -202,19 +202,21 @@ section{padding:96px 0; position:relative}
     display:flex; flex-direction:column; gap:8px;
   }
   .mobile-contact-label{
+    display:block;
     font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;
     font-weight:600; color:var(--muted-light); padding:0 2px;
   }
-  .mobile-contact-group .nav-mobile-only{
-    display:flex !important; align-items:center; gap:8px;
-    padding:12px 14px; border-radius:10px;
-    background:#fff; border:1px solid var(--line);
-    font-weight:600; color:var(--ink);
+  .mobile-contact-group .nav-mobile-only,
+  .mobile-contact-group .btn.nav-mobile-only{
+    display:flex !important; align-items:center; justify-content:center; gap:8px;
+    width:100%; min-height:48px; padding:0 14px; border-radius:10px;
+    font-size:0.92rem; font-weight:600; line-height:1;
+    background:#fff; border:1px solid var(--line); color:var(--ink);
   }
-  .mobile-contact-group .nav-mobile-only:hover{border-color:var(--accent); color:var(--accent)}
+  .mobile-contact-group .nav-phone-link:hover{border-color:var(--accent); color:var(--accent)}
   .nav-phone-link svg{width:16px; height:16px; stroke:var(--accent); stroke-width:2.2; fill:none; flex-shrink:0}
-  .mobile-contact-group .btn{
-    justify-content:center; margin-top:0;
+  .mobile-contact-group .btn.nav-mobile-only{
+    margin-top:0; background:var(--accent); border-color:var(--accent); color:#fff;
     box-shadow:0 4px 14px rgba(216,98,0,0.25);
   }
 }
