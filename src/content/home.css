@@ -131,6 +131,7 @@ section{padding:96px 0; position:relative}
 .nav-drop-link:hover .ndl-desc{color:var(--accent)}
 
 .nav-mobile-only{display:none !important}
+.mobile-contact-group,.mobile-contact-label{display:none}
 .nav-burger{display:none}
 @media(min-width:981px){
   .nav-inner{gap:clamp(16px,3vw,40px)}
