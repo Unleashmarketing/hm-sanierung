@@ -1,0 +1,178 @@
+/* ==============================================================
+   BAD-SANIERUNG · additive Styles
+   Setzt auf home.css auf (gleiche Tokens, Nav, Footer, Buttons).
+   Nur was diese Seite eigenes braucht, steht hier drin.
+   ============================================================== */
+
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb{
+  padding:calc(var(--ticker-h) + 92px) 0 0;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+.breadcrumb ol{
+  list-style:none; display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0; padding:0;
+}
+.breadcrumb li{display:inline-flex; align-items:center; gap:8px}
+.breadcrumb li + li::before{
+  content:"›"; color:var(--muted-light); font-size:1rem; line-height:1;
+}
+.breadcrumb a{color:var(--muted); transition:color 0.2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb li[aria-current]{color:var(--ink); font-weight:500}
+
+/* ---------- HERO (eigenes Layout, ruhiger als Home-Hero) ---------- */
+.bad-hero{
+  padding:32px 0 96px;
+}
+@media(max-width:880px){.bad-hero{padding:24px 0 64px}}
+
+.bad-hero-grid{
+  max-width:var(--max); margin:0 auto; padding:0 var(--gutter);
+  display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;
+}
+@media(max-width:960px){.bad-hero-grid{grid-template-columns:1fr; gap:40px}}
+
+.bad-hero-copy .hero-title{margin-top:6px; margin-bottom:20px}
+.bad-hero-copy .hero-lede{
+  font-size:clamp(1.02rem, 1.3vw, 1.15rem);
+  color:var(--muted);
+  max-width:560px;
+  margin-bottom:32px;
+}
+.bad-hero-copy .hero-lede strong{color:var(--ink); font-weight:600}
+.bad-hero-copy .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:40px}
+
+.bad-hero-trust{
+  display:grid; grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:0; border-top:1px solid var(--line);
+  padding-top:24px; max-width:560px;
+}
+.bad-hero-trust > div{
+  display:flex; flex-direction:column; gap:4px;
+  padding-right:16px;
+}
+.bad-hero-trust > div + div{border-left:1px solid var(--line); padding-left:20px}
+.bad-hero-trust strong{
+  font-family:var(--heading); font-size:1.4rem; font-weight:700;
+  color:var(--ink); letter-spacing:-0.02em; line-height:1;
+}
+.bad-hero-trust span{font-size:0.78rem; color:var(--muted); letter-spacing:0.02em}
+@media(max-width:520px){
+  .bad-hero-trust strong{font-size:1.15rem}
+  .bad-hero-trust > div + div{padding-left:14px}
+}
+
+.bad-hero-visual{
+  position:relative; border-radius:8px; overflow:hidden;
+  background:var(--paper-2);
+  aspect-ratio:4/5; max-height:640px;
+}
+.bad-hero-visual img{width:100%; height:100%; object-fit:cover; display:block}
+.bad-hero-caption{
+  position:absolute; left:20px; bottom:20px; right:20px;
+  background:rgba(10,10,10,0.78); color:#fff;
+  padding:14px 18px; border-radius:6px;
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+}
+.bad-hero-caption .hs-title{font-family:var(--heading); font-weight:600; font-size:0.98rem; letter-spacing:-0.01em}
+.bad-hero-caption .hs-sub{font-size:0.78rem; opacity:0.75; margin-top:2px}
+
+/* ---------- PRINZIPIEN (Story-Kacheln, nicht Feature-Grid) ---------- */
+.bad-principles{background:var(--paper-2)}
+.principle-grid{
+  display:grid; grid-template-columns:repeat(2, 1fr);
+  gap:2px; background:var(--line); margin-top:40px;
+  border:1px solid var(--line); border-radius:6px; overflow:hidden;
+}
+@media(max-width:760px){.principle-grid{grid-template-columns:1fr}}
+.principle{
+  background:var(--paper); padding:36px 32px;
+  display:flex; flex-direction:column; gap:14px;
+}
+@media(max-width:520px){.principle{padding:28px 22px}}
+.pnum{
+  font-family:var(--heading); font-size:0.82rem; font-weight:600;
+  letter-spacing:0.14em; color:var(--accent);
+}
+.principle h3{margin-bottom:2px}
+.principle p{color:var(--muted); font-size:0.95rem; line-height:1.65}
+
+/* ---------- VARIANTEN ---------- */
+.variant-grid{
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:20px; margin-top:40px;
+}
+@media(max-width:1000px){.variant-grid{grid-template-columns:repeat(2, 1fr)}}
+@media(max-width:560px){.variant-grid{grid-template-columns:1fr}}
+
+.variant-card{
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:8px; overflow:hidden;
+  display:flex; flex-direction:column;
+  transition:border-color 0.2s, transform 0.2s;
+}
+.variant-card:hover{border-color:var(--ink-soft); transform:translateY(-2px)}
+.variant-img{aspect-ratio:4/3; overflow:hidden; background:var(--paper-2)}
+.variant-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease}
+.variant-card:hover .variant-img img{transform:scale(1.04)}
+.variant-body{padding:22px 22px 24px; display:flex; flex-direction:column; gap:10px; flex:1}
+.variant-body h3{font-size:1.1rem}
+.variant-body p{color:var(--muted); font-size:0.9rem; line-height:1.6; flex:1}
+.variant-foot{
+  display:flex; justify-content:space-between; align-items:center;
+  padding-top:14px; border-top:1px solid var(--line-soft);
+  margin-top:6px;
+}
+.variant-price{
+  font-family:var(--heading); font-weight:700; color:var(--ink);
+  font-size:1rem; letter-spacing:-0.01em;
+}
+.variant-time{
+  font-size:0.75rem; color:var(--muted);
+  background:var(--paper-2); padding:4px 10px; border-radius:100px;
+  letter-spacing:0.02em;
+}
+
+/* ---------- CASE / REFERENZ ---------- */
+.bad-case{background:var(--paper-2)}
+.case-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
+  margin-top:40px;
+}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr; gap:36px}}
+.case-visual{
+  border-radius:8px; overflow:hidden; background:var(--paper);
+  aspect-ratio:4/3;
+}
+.case-visual img{width:100%; height:100%; object-fit:cover; display:block}
+.case-facts{display:flex; flex-direction:column; gap:0}
+.case-row{
+  display:grid; grid-template-columns:130px 1fr; gap:16px;
+  padding:14px 0; border-bottom:1px solid var(--line);
+  align-items:baseline;
+}
+.case-row:first-child{padding-top:0}
+.cl{
+  font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+}
+.cv{color:var(--ink); font-size:0.95rem; line-height:1.5}
+.case-quote{
+  margin-top:28px; padding:22px 24px;
+  background:var(--paper); border-left:3px solid var(--accent);
+  border-radius:4px;
+  font-style:italic; color:var(--ink-soft); line-height:1.6;
+  font-size:0.98rem;
+}
+.case-quote cite{
+  display:block; margin-top:10px;
+  font-style:normal; font-size:0.82rem; color:var(--muted);
+}
+
+/* ---------- Hilfsklassen ---------- */
+.lf-alt{
+  margin-top:20px; font-size:0.9rem; color:var(--muted);
+}
+.lf-alt a{color:var(--ink); font-weight:600; border-bottom:1px solid var(--accent); padding-bottom:1px}
+.lf-alt a:hover{color:var(--accent)}

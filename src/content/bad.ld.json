@@ -1,0 +1,81 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Badsanierung Heidelberg, Mannheim & Heilbronn",
+    "serviceType": "Badsanierung",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "HeinzelMänner Hausmeister Dienste und Gebäude Service GmbH",
+      "url": "https://www.hm-sanierung.com",
+      "telephone": "+49-6224-9689465",
+      "email": "info@hm-sanierung.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Im Hagen 4",
+        "addressLocality": "Leimen",
+        "postalCode": "69181",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "180",
+        "bestRating": "5"
+      }
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Heidelberg" },
+      { "@type": "City", "name": "Mannheim" },
+      { "@type": "City", "name": "Heilbronn" },
+      { "@type": "City", "name": "Schwetzingen" },
+      { "@type": "City", "name": "Leimen" },
+      { "@type": "City", "name": "Sinsheim" },
+      { "@type": "City", "name": "Ludwigshafen" },
+      { "@type": "City", "name": "Walldorf" },
+      { "@type": "City", "name": "Weinheim" }
+    ],
+    "description": "Komplette Badsanierung aus einer Hand in Heidelberg, Mannheim und Heilbronn: Sanitär, Fliesen, Elektrik, Walk-in-Duschen und barrierefreie Bäder – mit Festpreisgarantie und eigenen Handwerkern. Fertig in 2–4 Wochen.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "12500",
+      "highPrice": "35000",
+      "offerCount": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Badsanierungsleistungen",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Komplettbad 5–7 m²", "description": "Sanitär, Fliesen, Elektrik, Türen – schlüsselfertig" }, "price": "12500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Walk-in-Dusche", "description": "Bodengleiche Dusche mit Glaswand" }, "price": "4800", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Barrierefreies Bad", "description": "Bodengleiche Dusche, Haltegriffe, Sitzmöglichkeiten – KfW-förderfähig" }, "price": "18500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gäste-WC", "description": "Kompaktes Gäste-WC komplett saniert" }, "price": "6500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fliesenarbeiten", "description": "Fliesen legen inkl. Untergrund, Fugen und Silikon" }, "price": "68", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "68", "priceCurrency": "EUR", "unitText": "m²" } }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://hm-sanierung.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Badsanierung", "item": "https://hm-sanierung.com/badsanierung" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Was kostet eine Badsanierung?", "acceptedAnswer": { "@type": "Answer", "text": "Ein 5–7 m² Komplettbad liegt typischerweise zwischen 12.500 € und 22.000 € brutto – abhängig von Sanitärqualität, Fliesenwahl und ob nur oberflächlich oder auf den Rohbau saniert wird. Ein barrierefreies Bad ab 18.500 €. Den verbindlichen Festpreis erhalten Sie nach der kostenlosen Vor-Ort-Begehung." } },
+      { "@type": "Question", "name": "Wie lange dauert eine Badsanierung?", "acceptedAnswer": { "@type": "Answer", "text": "Ein Komplettbad ist in der Regel in 2–4 Wochen fertig. Ein reiner Duschtausch oder Wanne-raus-Dusche-rein in 3–5 Tagen. Wir koordinieren alle Gewerke selbst – daher keine Leerlaufzeiten zwischen Sanitär, Fliesen und Elektro." } },
+      { "@type": "Question", "name": "Können wir während der Badsanierung im Haus wohnen bleiben?", "acceptedAnswer": { "@type": "Answer", "text": "In fast allen Fällen ja. Bei nur einem Bad in der Wohnung stellen wir bei Bedarf eine mobile Toilette. Wir stauben ab, decken ab und arbeiten nur werktags zu üblichen Zeiten – damit Sie normal wohnen können." } },
+      { "@type": "Question", "name": "Übernehmen Sie Sanitär, Fliesen und Elektrik selbst?", "acceptedAnswer": { "@type": "Answer", "text": "Ja – alle drei Gewerke machen unsere eigenen 45 Mitarbeiter. Sie haben einen Ansprechpartner (Bauleiter) für das komplette Bad, nicht drei verschiedene Firmen mit unterschiedlichen Terminen." } },
+      { "@type": "Question", "name": "Gibt es Fördermittel für die Badsanierung?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Für barrierefreie Umbauten die KfW 455-B (Zuschuss bis 6.250 €) und KfW 159 (Altersgerecht umbauen, Kredit). Bei energetischer Sanierung mit neuer Heizung kombinierbar. Wir helfen bei Antrag und Nachweisen kostenlos." } },
+      { "@type": "Question", "name": "Was ist im Festpreis enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Rückbau, Entsorgung, Sanitärinstallation, Fliesen inkl. Material bis vereinbarter Qualitätsstufe, Elektroanschlüsse, Silikonarbeiten und besenreine Übergabe. Nicht enthalten sind Sonderwünsche (z. B. Designerarmaturen, Naturstein), die wir in einer separaten Position transparent aufführen." } },
+      { "@type": "Question", "name": "Was, wenn beim Rückbau ein Schaden entdeckt wird?", "acceptedAnswer": { "@type": "Answer", "text": "Wir stoppen die Arbeit, dokumentieren mit Foto und stimmen mit Ihnen ab – bevor wir weitermachen. Kein stiller Aufschlag auf der Rechnung. Solche Fälle (z. B. undichte Steigleitung) sind selten, aber bei alter Substanz möglich – wir sind darauf vorbereitet." } },
+      { "@type": "Question", "name": "In welchen Städten sind Sie tätig?", "acceptedAnswer": { "@type": "Answer", "text": "Heidelberg, Mannheim, Ludwigshafen, Schwetzingen, Leimen, Sinsheim, Walldorf, Weinheim und der komplette Raum Heilbronn. Anfahrt bis 50 km ist im Festpreis enthalten." } }
+    ]
+  }
+]
