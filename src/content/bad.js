@@ -20,8 +20,6 @@ const heroSlider = document.getElementById('heroSlider');
 if (heroSlider) {
   const slides = heroSlider.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.hero-dot');
-  const prev = document.querySelector('.hero-prev');
-  const next = document.querySelector('.hero-next');
 
   const goTo = i => {
     const idx = (i + slides.length) % slides.length;
@@ -30,8 +28,6 @@ if (heroSlider) {
 
   const currentIndex = () => Math.round(heroSlider.scrollLeft / heroSlider.clientWidth);
 
-  prev?.addEventListener('click', () => goTo(currentIndex() - 1));
-  next?.addEventListener('click', () => goTo(currentIndex() + 1));
   dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
 
   heroSlider.addEventListener('scroll', () => {
