@@ -78,11 +78,18 @@ function updateCalc() {
   calcSizeValue.textContent = size.toFixed(1).replace('.', ',');
 
   const cfg = calcConfig[type];
-  const min = Math.round(cfg.base + size * cfg.perSqm.basic);
-  const max = Math.round(cfg.base + size * cfg.perSqm[currentLevel]);
+  const levels = ['basic', 'comfort', 'premium'];
+  const idx = levels.indexOf(currentLevel);
+  const selected = Math.round(cfg.base + size * cfg.perSqm[currentLevel]);
+  let max;
+  if (idx < levels.length - 1) {
+    max = Math.round(cfg.base + size * cfg.perSqm[levels[idx + 1]]);
+  } else {
+    max = Math.round(selected * 1.2);
+  }
 
-  calcPrice.textContent = `ab ${fmt.format(min)}`;
-  calcRange.textContent = `${fmt.format(min)} – ${fmt.format(max)}`;
+  calcPrice.textContent = `ab ${fmt.format(selected)}`;
+  calcRange.textContent = `${fmt.format(selected)} – ${fmt.format(max)}`;
   updateRangeFill();
 }
 
