@@ -100,27 +100,15 @@
   text-transform:uppercase; color:#fff;
 }
 
-.hero-arrow{
-  position:absolute; top:50%; transform:translateY(-50%); z-index:10;
-  width:36px; height:36px; border-radius:50%;
-  background:#fff; border:1px solid var(--line); color:var(--ink);
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,0.12);
-  transition:background 0.2s, border-color 0.2s, color 0.2s;
-}
-.hero-arrow:hover{background:var(--accent); border-color:var(--accent); color:#fff}
-.hero-arrow svg{width:16px; height:16px; stroke:currentColor; stroke-width:2.2; fill:none}
-.hero-prev{left:12px}
-.hero-next{right:12px}
 @media(max-width:640px){
   .bad-hero-visual{padding-top:0; padding-bottom:8px}
-  .hero-prev{left:8px}
-  .hero-next{right:8px}
 }
 .hero-dots{
-  position:absolute; bottom:16px; left:16px; z-index:10;
-  display:flex; justify-content:flex-start; align-items:center; gap:6px;
+  position:absolute; top:16px; right:16px; bottom:auto; left:auto; z-index:10;
+  display:flex; justify-content:flex-end; align-items:center; gap:6px;
   margin:0; min-height:auto;
+  background:rgba(255,255,255,0.15); backdrop-filter:blur(10px);
+  padding:8px 12px; border-radius:8px;
 }
 .hero-dot{
   width:6px; height:6px; border-radius:50%; border:none; padding:0;
@@ -129,7 +117,7 @@
 }
 .hero-dot.is-active{background:#fff; width:18px; border-radius:3px}
 @media(max-width:640px){
-  .hero-dots{bottom:24px; left:16px; gap:6px}
+  .hero-dots{top:16px; right:16px; gap:6px; padding:7px 11px}
   .hero-label{top:16px; left:16px; font-size:0.7rem; padding:6px 14px}
 }
 
