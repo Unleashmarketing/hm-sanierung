@@ -210,6 +210,50 @@
   </div>
 </section>
 
+<!-- PREIS-RECHNER -->
+<section id="rechner" class="bad-calc">
+  <div class="wrap">
+    <div class="sh fade-up visible">
+      <div class="eyebrow">Preis-Rechner</div>
+      <h2>Wie viel kostet Ihr neues Bad?</h2>
+      <p>Wählen Sie Variante, Größe und Ausstattung — und erhalten Sie eine erste, ehrliche Preisspanne. Der verbindliche Festpreis folgt nach der kostenlosen Vor-Ort-Begehung.</p>
+    </div>
+    <div class="calc-card fade-up visible">
+      <div class="calc-form">
+        <div class="calc-field">
+          <label for="calc-type">Bad-Variante</label>
+          <select id="calc-type">
+            <option value="komplett">Komplettbad</option>
+            <option value="dusche">Wanne raus, Dusche rein</option>
+            <option value="barrierefrei">Barrierefreies Bad</option>
+            <option value="gaeste">Gäste-WC</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label for="calc-size">Fläche: <span id="calc-size-value">6,0</span> m²</label>
+          <input type="range" id="calc-size" min="2" max="20" value="6" step="0.5" aria-valuemin="2" aria-valuemax="20">
+          <div class="calc-hint">2 bis 20 m² — für größere Bäder bitten wir um ein Gespräch</div>
+        </div>
+        <div class="calc-field">
+          <label>Ausstattung</label>
+          <div class="calc-segment" id="calc-level" role="group" aria-label="Ausstattungslinie">
+            <button type="button" data-value="basic" class="is-active">Basic</button>
+            <button type="button" data-value="comfort">Komfort</button>
+            <button type="button" data-value="premium">Premium</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Geschätzte Investition</div>
+        <div class="calc-price" id="calc-price">ab 12.500 €</div>
+        <div class="calc-range" id="calc-range">12.500 € – 18.000 €</div>
+        <div class="calc-note">Inkl. Material, Rückbau und Verfliesung. Ohne Überraschungen im Rohbau.</div>
+        <a href="#anfrage" class="btn btn-accent btn-block">Persönliches Angebot anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- REFERENZ — ein einziges Projekt ausführlich, wirkt vertrauensbildender als 20 Thumbnails -->
 <section id="projekt" class="bad-case">
   <div class="wrap">
