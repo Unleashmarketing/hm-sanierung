@@ -125,7 +125,7 @@ section{padding:96px 0; position:relative}
   transition:background .2s, color .2s;
 }
 .nav-drop-link:hover{background:var(--accent-soft); color:var(--accent)}
-.ndl-meta{display:flex; flex-direction:column; gap:4px}
+.ndl-meta{display:flex; flex-direction:column; gap:4px; padding:5px}
 .ndl-label{display:block; font-family:var(--heading); font-size:0.98rem; font-weight:700; letter-spacing:-0.02em; line-height:1.2}
 .ndl-desc{display:block; font-size:0.84rem; color:var(--muted); line-height:1.45; white-space:normal; transition:color .2s}
 .nav-drop-link:hover .ndl-desc{color:var(--accent)}
