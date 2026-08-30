@@ -67,6 +67,7 @@
   position:relative;
   aspect-ratio:4/5; max-height:520px;
   max-width:440px; margin-left:auto; width:100%;
+  border-radius:14px; overflow:hidden;
 }
 @media(max-width:960px){.bad-hero-visual{margin:0 auto}}
 .hero-slider{
@@ -74,13 +75,13 @@
   overflow-x:auto; scroll-snap-type:x mandatory;
   scrollbar-width:none; -ms-overflow-style:none;
   scroll-behavior:smooth;
-  border-radius:12px; background:var(--line);
+  background:var(--line);
 }
 .hero-slider::-webkit-scrollbar{display:none}
 .hero-slide{flex:0 0 100%; scroll-snap-align:start; position:relative; opacity:1; transform:none; transition:none}
 .hero-slide img{width:100%; height:100%; object-fit:cover; display:block}
 .hero-slide .pmeta{
-  position:absolute; bottom:0; left:0; right:0; padding:14px;
+  position:absolute; bottom:0; left:0; right:0; padding:42px 16px 42px;
   background:linear-gradient(transparent, rgba(0,0,0,0.65)); color:#fff;
 }
 .hero-slide .ptag{
@@ -92,10 +93,11 @@
 .hero-slide .pname{font-size:0.82rem; font-weight:600; line-height:1.25}
 
 .hero-label{
-  position:absolute; top:12px; left:12px; z-index:10;
-  font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;
-  background:rgba(255,255,255,0.86); backdrop-filter:blur(6px);
-  padding:4px 10px; border-radius:20px; color:var(--ink);
+  position:absolute; top:16px; left:16px; z-index:10;
+  background:rgba(255,255,255,0.15); backdrop-filter:blur(10px);
+  padding:6px 14px; border-radius:8px;
+  font-size:0.7rem; font-weight:600; letter-spacing:0.08em;
+  text-transform:uppercase; color:#fff;
 }
 
 .hero-arrow{
@@ -116,20 +118,19 @@
   .hero-next{right:8px}
 }
 .hero-dots{
-  position:absolute; top:12px; right:12px; z-index:10;
-  display:flex; justify-content:center; align-items:center; gap:6px;
+  position:absolute; bottom:16px; left:16px; z-index:10;
+  display:flex; justify-content:flex-start; align-items:center; gap:6px;
   margin:0; min-height:auto;
 }
 .hero-dot{
-  width:10px; height:10px; border-radius:50%; border:none; padding:0;
-  background:rgba(255,255,255,0.7); cursor:pointer;
-  transition:background 0.2s, transform 0.2s;
+  width:6px; height:6px; border-radius:50%; border:none; padding:0;
+  background:rgba(255,255,255,0.35); cursor:pointer;
+  transition:background 0.3s, width 0.3s;
 }
-.hero-dot.is-active{background:var(--accent); transform:scale(1.25)}
+.hero-dot.is-active{background:#fff; width:18px; border-radius:3px}
 @media(max-width:640px){
-  .hero-dots{top:10px; right:10px; gap:5px}
-  .hero-label{top:10px; left:10px; font-size:0.6rem; padding:3px 8px}
-  .hero-dot{width:9px; height:9px}
+  .hero-dots{bottom:24px; left:16px; gap:6px}
+  .hero-label{top:16px; left:16px; font-size:0.7rem; padding:6px 14px}
 }
 
 /* ---------- PRINZIPIEN (Story-Kacheln, nicht Feature-Grid) ---------- */
