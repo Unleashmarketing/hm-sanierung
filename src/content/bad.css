@@ -91,6 +91,13 @@
 }
 .hero-slide .pname{font-size:0.82rem; font-weight:600; line-height:1.25}
 
+.hero-label{
+  position:absolute; top:12px; left:12px; z-index:10;
+  font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;
+  background:rgba(255,255,255,0.86); backdrop-filter:blur(6px);
+  padding:4px 10px; border-radius:20px; color:var(--ink);
+}
+
 .hero-arrow{
   position:absolute; top:50%; transform:translateY(-50%); z-index:10;
   width:36px; height:36px; border-radius:50%;
@@ -104,25 +111,25 @@
 .hero-prev{left:12px}
 .hero-next{right:12px}
 @media(max-width:640px){
-  .bad-hero-visual{padding-top:28px; padding-bottom:8px}
+  .bad-hero-visual{padding-top:0; padding-bottom:8px}
   .hero-prev{left:8px}
   .hero-next{right:8px}
 }
 .hero-dots{
-  display:flex; justify-content:center; align-items:center; gap:10px;
-  margin-top:16px; min-height:18px;
+  position:absolute; top:12px; right:12px; z-index:10;
+  display:flex; justify-content:center; align-items:center; gap:6px;
+  margin:0; min-height:auto;
 }
 .hero-dot{
-  width:12px; height:12px; border-radius:50%; border:none; padding:0;
-  background:#9CA3AF; cursor:pointer;
+  width:10px; height:10px; border-radius:50%; border:none; padding:0;
+  background:rgba(255,255,255,0.7); cursor:pointer;
   transition:background 0.2s, transform 0.2s;
 }
 .hero-dot.is-active{background:var(--accent); transform:scale(1.25)}
 @media(max-width:640px){
-  .hero-dots{
-    position:absolute; top:0; left:0; right:0;
-    margin-top:0; z-index:2;
-  }
+  .hero-dots{top:10px; right:10px; gap:5px}
+  .hero-label{top:10px; left:10px; font-size:0.6rem; padding:3px 8px}
+  .hero-dot{width:9px; height:9px}
 }
 
 /* ---------- PRINZIPIEN (Story-Kacheln, nicht Feature-Grid) ---------- */
