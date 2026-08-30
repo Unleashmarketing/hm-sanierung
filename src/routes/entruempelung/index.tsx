@@ -8,13 +8,13 @@ import ld from "@/content/entruempelung.ld.json";
 export const Route = createFileRoute("/entruempelung/")({
   head: () => ({
     meta: [
-      { title: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HeinzelM\u00e4nner" },
+      { title: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HM Sanierung" },
       {
         name: "description",
         content:
           "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis: Festpreis binnen 24 Stunden, besenrein garantiert, versichert und mit eigenem Team.",
       },
-      { property: "og:title", content: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HeinzelM\u00e4nner" },
+      { property: "og:title", content: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HM Sanierung" },
       {
         property: "og:description",
         content:

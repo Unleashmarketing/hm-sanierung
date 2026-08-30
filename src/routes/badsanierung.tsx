@@ -11,7 +11,7 @@ export const Route = createFileRoute("/badsanierung")({
     meta: [
       {
         title:
-          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis, fertig in 2\u20134 Wochen | HeinzelM\u00e4nner",
+          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis, fertig in 2\u20134 Wochen | HM Sanierung",
       },
       {
         name: "description",
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/badsanierung")({
       {
         property: "og:title",
         content:
-          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis | HeinzelM\u00e4nner",
+          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis | HM Sanierung",
       },
       {
         property: "og:description",
