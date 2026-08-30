@@ -120,7 +120,7 @@ section{padding:96px 0; position:relative}
 .nav-drop:hover .nav-drop-panel,
 .nav-drop:focus-within .nav-drop-panel{opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0)}
 .nav-drop-link{
-  display:block; padding:20px 22px;
+  display:block; padding:28px 30px;
   border-radius:12px; color:var(--ink);
   transition:background .2s, color .2s;
 }
@@ -185,7 +185,7 @@ section{padding:96px 0; position:relative}
   }
   .nav-drop-panel::before{display:none}
   .nav-drop-link{
-    padding:10px 12px; border-radius:10px;
+    padding:16px 18px; border-radius:10px;
     position:relative; color:var(--ink);
   }
   .nav-drop-link::before{
