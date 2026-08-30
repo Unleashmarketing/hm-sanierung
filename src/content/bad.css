@@ -101,12 +101,16 @@
 }
 .hero-arrow:hover{background:var(--accent); border-color:var(--accent); color:#fff}
 .hero-arrow svg{width:16px; height:16px; stroke:currentColor; stroke-width:2.2; fill:none}
-.hero-prev{left:8px}
-.hero-next{right:8px}
+.hero-prev{left:12px}
+.hero-next{right:12px}
+@media(max-width:640px){
+  .bad-hero-visual{padding-top:28px; padding-bottom:8px}
+  .hero-prev{left:8px}
+  .hero-next{right:8px}
+}
 .hero-dots{
-  position:absolute; left:0; right:0; bottom:-30px;
   display:flex; justify-content:center; align-items:center; gap:10px;
-  min-height:18px; z-index:2; margin-top:0;
+  margin-top:16px; min-height:18px;
 }
 .hero-dot{
   width:12px; height:12px; border-radius:50%; border:none; padding:0;
@@ -114,6 +118,12 @@
   transition:background 0.2s, transform 0.2s;
 }
 .hero-dot.is-active{background:var(--accent); transform:scale(1.25)}
+@media(max-width:640px){
+  .hero-dots{
+    position:absolute; top:0; left:0; right:0;
+    margin-top:0; z-index:2;
+  }
+}
 
 /* ---------- PRINZIPIEN (Story-Kacheln, nicht Feature-Grid) ---------- */
 .bad-principles{background:var(--paper-2)}
