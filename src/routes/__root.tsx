@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HeinzelMänner — Sanierung aus einer Hand" },
+      { title: "HM Sanierung — Sanierung aus einer Hand" },
       {
         name: "description",
         content:
           "Sanierung & Renovierung in Heidelberg, Mannheim und Heilbronn — Festpreisgarantie, eigene Handwerker.",
       },
-      { name: "author", content: "HeinzelMänner" },
-      { property: "og:title", content: "HeinzelMänner — Sanierung aus einer Hand" },
+      { name: "author", content: "HM Sanierung" },
+      { property: "og:title", content: "HM Sanierung — Sanierung aus einer Hand" },
       {
         property: "og:description",
         content:
