@@ -16,6 +16,14 @@
   --radius: 16px;
   --radius-sm: 10px;
   --max: 1200px;
+  --gutter: 32px;
+  --accent-soft: #FFF1E2;
+  --line-soft: #EDEAE2;
+  --muted-light: #888888;
+  --ink: var(--navy);
+  --line: var(--border);
+  --muted: var(--text-muted);
+  --paper-2: var(--warm-grey);
   --heading: 'Space Grotesk', 'Inter', sans-serif;
 }
 
