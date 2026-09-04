@@ -1,3 +1,7 @@
+// Nav scroll
+const nav = document.getElementById('nav');
+if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), {passive:true});
+
 (function () {
   var wrap = document.getElementById('baWrap');
   if (!wrap) return;
