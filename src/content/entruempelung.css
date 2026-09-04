@@ -1133,7 +1133,7 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
 /* ============ NAV (Homepage-Stil) ============ */
 .nav { padding: 4px 0; }
 .nav-inner {
-  max-width: var(--max); margin: 0 auto; padding: 0 24px;
+  max-width: 1320px; margin: 0 auto; padding: 0 32px;
   display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
 }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 1rem; font-weight: 400; letter-spacing: 0; }
@@ -1180,7 +1180,8 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
 
 .nav-mobile-only { display: none !important; }
 .mobile-contact-group, .mobile-contact-label { display: none; }
-.nav-right { display: flex; align-items: center; gap: 14px; justify-self: end; }
+.nav-right { display: flex; align-items: center; gap: 18px; justify-self: end; }
+.nav-right .btn { padding: 14px 28px; }
 .nav-phone { font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; gap: 6px; color: var(--navy); }
 .nav-phone svg { width: 14px; height: 14px; stroke: var(--accent); stroke-width: 2.2; fill: none; }
 
