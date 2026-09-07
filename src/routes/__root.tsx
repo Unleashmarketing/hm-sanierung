@@ -133,6 +133,14 @@ window.gtag_report_conversion = function(url, send_to) {
 window.gtag_report_lead = function(send_to) {
   gtag('event', 'conversion', { 'send_to': send_to });
 };
+window.gtag_report_pageview = function(path) {
+  gtag('event', 'page_view', {
+    send_to: 'G-SMCEYF0863',
+    page_location: window.location.href,
+    page_path: path || window.location.pathname,
+    page_title: document.title
+  });
+};
 `,
       },
     ],
@@ -163,8 +171,20 @@ function RootComponent() {
 
   useEffect(() => {
     const unsubscribe = router.subscribe("onResolved", ({ toLocation }) => {
-      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
-      w.gtag?.("event", "page_view", { page_path: toLocation.pathname });
+      const w = window as unknown as {
+        gtag?: (...args: unknown[]) => void;
+        gtag_report_pageview?: (path?: string) => void;
+      };
+      if (w.gtag_report_pageview) {
+        w.gtag_report_pageview(toLocation.pathname);
+      } else {
+        w.gtag?.("event", "page_view", {
+          send_to: "G-SMCEYF0863",
+          page_path: toLocation.pathname,
+          page_location: window.location.href,
+          page_title: document.title,
+        });
+      }
     });
     return unsubscribe;
   }, [router]);
