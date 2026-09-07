@@ -1,0 +1,77 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Bodenverlegung Heidelberg, Mannheim & Heilbronn",
+    "serviceType": "Bodenverlegung",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "HM Sanierung GmbH",
+      "url": "https://www.hm-sanierung.com",
+      "telephone": "+49-6224-9689465",
+      "email": "info@hm-sanierung.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Im Hagen 4",
+        "addressLocality": "Leimen",
+        "postalCode": "69181",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "180",
+        "bestRating": "5"
+      }
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Heidelberg" },
+      { "@type": "City", "name": "Mannheim" },
+      { "@type": "City", "name": "Heilbronn" },
+      { "@type": "City", "name": "Schwetzingen" },
+      { "@type": "City", "name": "Leimen" },
+      { "@type": "City", "name": "Sinsheim" },
+      { "@type": "City", "name": "Ludwigshafen" },
+      { "@type": "City", "name": "Walldorf" },
+      { "@type": "City", "name": "Weinheim" }
+    ],
+    "description": "Professionelle Bodenverlegung in Heidelberg, Mannheim und Heilbronn: Parkett, Vinyl, Laminat und Fliesen inklusive Untergrundvorbereitung, Trittschalldämmung und Fußleisten – mit Festpreisgarantie und eigenen Handwerkern.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "35",
+      "highPrice": "170",
+      "offerCount": "4"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bodenverlegungsleistungen",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parkett verlegen", "description": "Echtholzparkett, Fischgrät oder Landhausdiele, geölt oder lackiert" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "95", "priceCurrency": "EUR", "unitText": "m²" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vinyl & Designboden verlegen", "description": "Robuster, wasserfester Designboden inkl. Trittschalldämmung" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "55", "priceCurrency": "EUR", "unitText": "m²" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laminat verlegen", "description": "Preiswertes, strapazierfähiges Klick-Laminat inkl. Verlegung" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35", "priceCurrency": "EUR", "unitText": "m²" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fliesen & Feinsteinzeug verlegen", "description": "Großformatige Fliesen inkl. Untergrund, Fugen und Silikon" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "68", "priceCurrency": "EUR", "unitText": "m²" } }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://hm-sanierung.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Bodenverlegung", "item": "https://hm-sanierung.com/bodenverlegung" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Was kostet Bodenverlegung pro Quadratmeter?", "acceptedAnswer": { "@type": "Answer", "text": "Inklusive Material, Trittschalldämmung und Verlegung: Laminat ab ca. 35 €/m², Vinyl ab ca. 55 €/m², Parkett ab ca. 95 €/m² und Fliesen ab ca. 68 €/m² – jeweils brutto. Der verbindliche Festpreis steht nach der kostenlosen Vor-Ort-Begehung fest." } },
+      { "@type": "Question", "name": "Wie lange dauert die Verlegung?", "acceptedAnswer": { "@type": "Answer", "text": "Ein typisches Zimmer ist an einem Tag fertig, eine komplette Wohnung meist in 2–5 Tagen. Fliesen und verklebtes Parkett brauchen etwas länger, weil Kleber und Fugen aushärten müssen." } },
+      { "@type": "Question", "name": "Muss der alte Boden raus?", "acceptedAnswer": { "@type": "Answer", "text": "Nicht immer. Auf festem, ebenem Altbelag können Vinyl oder Laminat oft direkt verlegt werden. Teppich und lose Beläge werden entfernt und entsorgt." } },
+      { "@type": "Question", "name": "Funktioniert das mit Fußbodenheizung?", "acceptedAnswer": { "@type": "Answer", "text": "Ja – Vinyl, Fliesen und viele Parkette sind für Fußbodenheizung geeignet. Entscheidend ist der richtige Wärmedurchlasswiderstand." } },
+      { "@type": "Question", "name": "In welchen Städten sind Sie tätig?", "acceptedAnswer": { "@type": "Answer", "text": "Heidelberg, Mannheim, Ludwigshafen, Schwetzingen, Leimen, Sinsheim, Walldorf, Weinheim und der komplette Raum Heilbronn. Anfahrt bis 50 km ist im Festpreis enthalten." } }
+    ]
+  }
+]
