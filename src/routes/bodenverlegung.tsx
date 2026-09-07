@@ -8,11 +8,19 @@ import ld from "@/content/bodenverlegung.ld.json";
 import boden1 from "@/assets/boden-projekt-1.jpg";
 import boden2 from "@/assets/boden-projekt-2.jpg";
 import boden3 from "@/assets/boden-projekt-3.jpg";
+import belagParkett from "@/assets/belag-parkett.jpg";
+import belagVinyl from "@/assets/belag-vinyl.jpg";
+import belagLaminat from "@/assets/belag-laminat.jpg";
+import belagFliesen from "@/assets/belag-fliesen.jpg";
 
 const html = htmlBody
   .replaceAll("__BODEN1__", boden1)
   .replaceAll("__BODEN2__", boden2)
-  .replaceAll("__BODEN3__", boden3);
+  .replaceAll("__BODEN3__", boden3)
+  .replaceAll("__BELAG_PARKETT__", belagParkett)
+  .replaceAll("__BELAG_VINYL__", belagVinyl)
+  .replaceAll("__BELAG_LAMINAT__", belagLaminat)
+  .replaceAll("__BELAG_FLIESEN__", belagFliesen);
 
 export const Route = createFileRoute("/bodenverlegung")({
   head: () => ({
