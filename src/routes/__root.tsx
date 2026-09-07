@@ -110,6 +110,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-SMCEYF0863",
+        async: true,
+      },
+      {
+        children: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-SMCEYF0863');
+gtag('config', 'AW-16711717313');
+window.gtag_report_conversion = function(url, send_to) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') { window.location = url; }
+  };
+  gtag('event', 'conversion', { 'send_to': send_to, 'event_callback': callback });
+  return false;
+};
+window.gtag_report_lead = function(send_to) {
+  gtag('event', 'conversion', { 'send_to': send_to });
+};
+`,
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -133,6 +159,15 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const unsubscribe = router.subscribe("onResolved", ({ toLocation }) => {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      w.gtag?.("event", "page_view", { page_path: toLocation.pathname });
+    });
+    return unsubscribe;
+  }, [router]);
 
   return (
     <QueryClientProvider client={queryClient}>
