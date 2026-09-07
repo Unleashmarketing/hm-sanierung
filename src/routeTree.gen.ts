@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BadsanierungRouteImport } from './routes/badsanierung'
+import { Route as BodenverlegungRouteImport } from './routes/bodenverlegung'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EntruempelungIndexRouteImport } from './routes/entruempelung/index'
 import { Route as EntruempelungAgbRouteImport } from './routes/entruempelung/agb'
@@ -25,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
 const BadsanierungRoute = BadsanierungRouteImport.update({
   id: '/badsanierung',
   path: '/badsanierung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BodenverlegungRoute = BodenverlegungRouteImport.update({
+  id: '/bodenverlegung',
+  path: '/bodenverlegung',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -57,6 +63,7 @@ const EntruempelungImpressumRoute = EntruempelungImpressumRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/badsanierung': typeof BadsanierungRoute
+  '/bodenverlegung': typeof BodenverlegungRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/badsanierung': typeof BadsanierungRoute
+  '/bodenverlegung': typeof BodenverlegungRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/badsanierung': typeof BadsanierungRoute
+  '/bodenverlegung': typeof BodenverlegungRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/entruempelung/agb': typeof EntruempelungAgbRoute
   '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/badsanierung'
+    | '/bodenverlegung'
     | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/badsanierung'
+    | '/bodenverlegung'
     | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/badsanierung'
+    | '/bodenverlegung'
     | '/sitemap.xml'
     | '/entruempelung/agb'
     | '/entruempelung/datenschutz'
@@ -115,6 +127,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BadsanierungRoute: typeof BadsanierungRoute
+  BodenverlegungRoute: typeof BodenverlegungRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   EntruempelungAgbRoute: typeof EntruempelungAgbRoute
   EntruempelungDatenschutzRoute: typeof EntruempelungDatenschutzRoute
@@ -136,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/badsanierung'
       fullPath: '/badsanierung'
       preLoaderRoute: typeof BadsanierungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bodenverlegung': {
+      id: '/bodenverlegung'
+      path: '/bodenverlegung'
+      fullPath: '/bodenverlegung'
+      preLoaderRoute: typeof BodenverlegungRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -179,6 +199,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BadsanierungRoute: BadsanierungRoute,
+  BodenverlegungRoute: BodenverlegungRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   EntruempelungAgbRoute: EntruempelungAgbRoute,
   EntruempelungDatenschutzRoute: EntruempelungDatenschutzRoute,
