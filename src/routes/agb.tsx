@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import StaticPage from "@/components/StaticPage";
-import htmlBody from "@/content/entruempelung-agb.html?raw";
-import css from "@/content/entruempelung-agb.css?raw";
-import js from "@/content/entruempelung-agb.js?raw";
-import ld from "@/content/entruempelung-agb.ld.json";
+import htmlBody from "@/content/agb.html?raw";
+import css from "@/content/agb.css?raw";
+import js from "@/content/agb.js?raw";
+import ld from "@/content/agb.ld.json";
 
-export const Route = createFileRoute("/entruempelung/agb")({
+export const Route = createFileRoute("/agb")({
   head: () => ({
     meta: [
       { title: "Allgemeine Gesch\u00e4ftsbedingungen \u00b7 HM Sanierung" },
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/entruempelung/agb")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hm-sanierung.com/entruempelung/agb" }],
+    links: [{ rel: "canonical", href: "https://hm-sanierung.com/agb" }],
   }),
   component: Page,
 });

@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import StaticPage from "@/components/StaticPage";
-import htmlBody from "@/content/entruempelung-impressum.html?raw";
-import css from "@/content/entruempelung-impressum.css?raw";
-import js from "@/content/entruempelung-impressum.js?raw";
-import ld from "@/content/entruempelung-impressum.ld.json";
+import htmlBody from "@/content/impressum.html?raw";
+import css from "@/content/impressum.css?raw";
+import js from "@/content/impressum.js?raw";
+import ld from "@/content/impressum.ld.json";
 
-export const Route = createFileRoute("/entruempelung/impressum")({
+export const Route = createFileRoute("/impressum")({
   head: () => ({
     meta: [
       { title: "Impressum \u00b7 HM Sanierung" },
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/entruempelung/impressum")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hm-sanierung.com/entruempelung/impressum" }],
+    links: [{ rel: "canonical", href: "https://hm-sanierung.com/impressum" }],
   }),
   component: Page,
 });

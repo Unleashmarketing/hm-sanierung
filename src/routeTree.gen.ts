@@ -10,17 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgbRouteImport } from './routes/agb'
 import { Route as BadsanierungRouteImport } from './routes/badsanierung'
 import { Route as BodenverlegungRouteImport } from './routes/bodenverlegung'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EntruempelungIndexRouteImport } from './routes/entruempelung/index'
-import { Route as EntruempelungAgbRouteImport } from './routes/entruempelung/agb'
-import { Route as EntruempelungDatenschutzRouteImport } from './routes/entruempelung/datenschutz'
-import { Route as EntruempelungImpressumRouteImport } from './routes/entruempelung/impressum'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgbRoute = AgbRouteImport.update({
+  id: '/agb',
+  path: '/agb',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BadsanierungRoute = BadsanierungRouteImport.update({
@@ -33,6 +38,16 @@ const BodenverlegungRoute = BodenverlegungRouteImport.update({
   path: '/bodenverlegung',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -43,95 +58,79 @@ const EntruempelungIndexRoute = EntruempelungIndexRouteImport.update({
   path: '/entruempelung/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EntruempelungAgbRoute = EntruempelungAgbRouteImport.update({
-  id: '/entruempelung/agb',
-  path: '/entruempelung/agb',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EntruempelungDatenschutzRoute =
-  EntruempelungDatenschutzRouteImport.update({
-    id: '/entruempelung/datenschutz',
-    path: '/entruempelung/datenschutz',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const EntruempelungImpressumRoute = EntruempelungImpressumRouteImport.update({
-  id: '/entruempelung/impressum',
-  path: '/entruempelung/impressum',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/badsanierung': typeof BadsanierungRoute
   '/bodenverlegung': typeof BodenverlegungRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/entruempelung/agb': typeof EntruempelungAgbRoute
-  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
-  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
   '/entruempelung/': typeof EntruempelungIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/badsanierung': typeof BadsanierungRoute
   '/bodenverlegung': typeof BodenverlegungRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/entruempelung/agb': typeof EntruempelungAgbRoute
-  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
-  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
   '/entruempelung': typeof EntruempelungIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/badsanierung': typeof BadsanierungRoute
   '/bodenverlegung': typeof BodenverlegungRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/entruempelung/agb': typeof EntruempelungAgbRoute
-  '/entruempelung/datenschutz': typeof EntruempelungDatenschutzRoute
-  '/entruempelung/impressum': typeof EntruempelungImpressumRoute
   '/entruempelung/': typeof EntruempelungIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/agb'
     | '/badsanierung'
     | '/bodenverlegung'
+    | '/datenschutz'
+    | '/impressum'
     | '/sitemap.xml'
-    | '/entruempelung/agb'
-    | '/entruempelung/datenschutz'
-    | '/entruempelung/impressum'
     | '/entruempelung/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/agb'
     | '/badsanierung'
     | '/bodenverlegung'
+    | '/datenschutz'
+    | '/impressum'
     | '/sitemap.xml'
-    | '/entruempelung/agb'
-    | '/entruempelung/datenschutz'
-    | '/entruempelung/impressum'
     | '/entruempelung'
   id:
     | '__root__'
     | '/'
+    | '/agb'
     | '/badsanierung'
     | '/bodenverlegung'
+    | '/datenschutz'
+    | '/impressum'
     | '/sitemap.xml'
-    | '/entruempelung/agb'
-    | '/entruempelung/datenschutz'
-    | '/entruempelung/impressum'
     | '/entruempelung/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgbRoute: typeof AgbRoute
   BadsanierungRoute: typeof BadsanierungRoute
   BodenverlegungRoute: typeof BodenverlegungRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  EntruempelungAgbRoute: typeof EntruempelungAgbRoute
-  EntruempelungDatenschutzRoute: typeof EntruempelungDatenschutzRoute
-  EntruempelungImpressumRoute: typeof EntruempelungImpressumRoute
   EntruempelungIndexRoute: typeof EntruempelungIndexRoute
 }
 
@@ -142,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agb': {
+      id: '/agb'
+      path: '/agb'
+      fullPath: '/agb'
+      preLoaderRoute: typeof AgbRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/badsanierung': {
@@ -158,6 +164,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BodenverlegungRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -172,38 +192,17 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EntruempelungIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/entruempelung/agb': {
-      id: '/entruempelung/agb'
-      path: '/entruempelung/agb'
-      fullPath: '/entruempelung/agb'
-      preLoaderRoute: typeof EntruempelungAgbRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/entruempelung/datenschutz': {
-      id: '/entruempelung/datenschutz'
-      path: '/entruempelung/datenschutz'
-      fullPath: '/entruempelung/datenschutz'
-      preLoaderRoute: typeof EntruempelungDatenschutzRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/entruempelung/impressum': {
-      id: '/entruempelung/impressum'
-      path: '/entruempelung/impressum'
-      fullPath: '/entruempelung/impressum'
-      preLoaderRoute: typeof EntruempelungImpressumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgbRoute: AgbRoute,
   BadsanierungRoute: BadsanierungRoute,
   BodenverlegungRoute: BodenverlegungRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  EntruempelungAgbRoute: EntruempelungAgbRoute,
-  EntruempelungDatenschutzRoute: EntruempelungDatenschutzRoute,
-  EntruempelungImpressumRoute: EntruempelungImpressumRoute,
   EntruempelungIndexRoute: EntruempelungIndexRoute,
 }
 export const routeTree = rootRouteImport
