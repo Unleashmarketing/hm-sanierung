@@ -12,13 +12,13 @@ export const Route = createFileRoute("/impressum")({
       {
         name: "description",
         content:
-          "Impressum der HM Sanierung GmbH in Leimen: Anbieterangaben nach \u00a7 5 TMG, Gesch\u00e4ftsf\u00fchrung, Kontakt und Umsatzsteuer-ID.",
+          "Impressum der HeinzelMänner Hausmeister Dienste und Gebäude Service GmbH in Leimen: Anbieterangaben nach \u00a7 5 TMG, Gesch\u00e4ftsf\u00fchrung, Kontakt und Umsatzsteuer-ID.",
       },
       { property: "og:title", content: "Impressum \u00b7 HM Sanierung" },
       {
         property: "og:description",
         content:
-          "Impressum der HM Sanierung GmbH in Leimen: Anbieterangaben, Gesch\u00e4ftsf\u00fchrung, Kontakt und Umsatzsteuer-ID.",
+          "Impressum der HeinzelMänner Hausmeister Dienste und Gebäude Service GmbH in Leimen: Anbieterangaben, Gesch\u00e4ftsf\u00fchrung, Kontakt und Umsatzsteuer-ID.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

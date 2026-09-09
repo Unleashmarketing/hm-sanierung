@@ -12,13 +12,13 @@ export const Route = createFileRoute("/agb")({
       {
         name: "description",
         content:
-          "Allgemeine Gesch\u00e4ftsbedingungen der HM Sanierung GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Angebot, Festpreis, Termine, Zahlung, Haftung und Widerruf.",
+          "Allgemeine Gesch\u00e4ftsbedingungen der HeinzelMänner Hausmeister Dienste und Gebäude Service GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Angebot, Festpreis, Termine, Zahlung, Haftung und Widerruf.",
       },
       { property: "og:title", content: "Allgemeine Gesch\u00e4ftsbedingungen \u00b7 HM Sanierung" },
       {
         property: "og:description",
         content:
-          "AGB der HM Sanierung GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Festpreis, Termine, Zahlung, Haftung und Widerruf.",
+          "AGB der HeinzelMänner Hausmeister Dienste und Gebäude Service GmbH f\u00fcr Entr\u00fcmpelung und Haushaltsaufl\u00f6sung: Festpreis, Termine, Zahlung, Haftung und Widerruf.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
