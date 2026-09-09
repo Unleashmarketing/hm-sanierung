@@ -18,9 +18,9 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/badsanierung", changefreq: "weekly", priority: "0.9" },
           { path: "/bodenverlegung", changefreq: "weekly", priority: "0.9" },
           { path: "/entruempelung", changefreq: "weekly", priority: "0.9" },
-          { path: "/entruempelung/impressum", changefreq: "yearly", priority: "0.2" },
-          { path: "/entruempelung/datenschutz", changefreq: "yearly", priority: "0.2" },
-          { path: "/entruempelung/agb", changefreq: "yearly", priority: "0.2" },
+          { path: "/impressum", changefreq: "yearly", priority: "0.2" },
+          { path: "/datenschutz", changefreq: "yearly", priority: "0.2" },
+          { path: "/agb", changefreq: "yearly", priority: "0.2" },
         ];
 
         const urls = entries.map((e) =>
