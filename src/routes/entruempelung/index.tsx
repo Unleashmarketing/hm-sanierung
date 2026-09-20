@@ -8,17 +8,17 @@ import ld from "@/content/entruempelung.ld.json";
 export const Route = createFileRoute("/entruempelung/")({
   head: () => ({
     meta: [
-      { title: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HM Sanierung" },
+      { title: "Entr\u00fcmpelung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung" },
       {
         name: "description",
         content:
-          "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis: Festpreis binnen 24 Stunden, besenrein garantiert, versichert und mit eigenem Team.",
+          "Entr\u00fcmpelung in Heidelberg, Mannheim, Ludwigshafen, Frankenthal, Neustadt, Worms und Heilbronn: Festpreis binnen 24 Stunden, besenrein und versichert.",
       },
-      { property: "og:title", content: "Entr\u00fcmpelung Heidelberg & Rhein-Neckar \u2013 Festpreis in 24h | HM Sanierung" },
+      { property: "og:title", content: "Entr\u00fcmpelung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung" },
       {
         property: "og:description",
         content:
-          "Entr\u00fcmpelung, Haushalts- und Wohnungsaufl\u00f6sung in Heidelberg, Mannheim und dem Rhein-Neckar-Kreis: Festpreis binnen 24 Stunden, besenrein garantiert, versichert und mit eigenem Team.",
+          "Entr\u00fcmpelung in Heidelberg, Mannheim, Ludwigshafen, Frankenthal, Neustadt, Worms und Heilbronn: Festpreis binnen 24 Stunden, besenrein und versichert.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
