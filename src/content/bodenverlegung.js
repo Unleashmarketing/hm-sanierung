@@ -90,7 +90,7 @@ function updateCalc() {
   }
 
   calcPrice.textContent = `ab ${fmt.format(selected)}`;
-  calcRange.textContent = `${fmt.format(selected)} – ${fmt.format(max)}`;
+  calcRange.textContent = `${fmt.format(selected)}, ${fmt.format(max)}`;
   updateRangeFill();
 }
 

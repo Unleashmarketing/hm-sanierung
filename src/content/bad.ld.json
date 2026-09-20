@@ -75,7 +75,7 @@
         "name": "Worms"
       }
     ],
-    "description": "Komplette Badsanierung aus einer Hand in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn: Sanitär, Fliesen, Elektrik, Walk-in-Duschen und barrierefreie Bäder – mit Festpreisgarantie und eigenen Handwerkern. Fertig in 2–4 Wochen.",
+    "description": "Komplette Badsanierung aus einer Hand in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn: Sanitär, Fliesen, Elektrik, Walk-in-Duschen und barrierefreie Bäder, mit Festpreisgarantie und eigenen Handwerkern. Fertig in 2 bis 4 Wochen.",
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "EUR",
@@ -91,8 +91,8 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Komplettbad 5–7 m²",
-            "description": "Sanitär, Fliesen, Elektrik, Türen – schlüsselfertig"
+            "name": "Komplettbad 5 bis 7 m²",
+            "description": "Sanitär, Fliesen, Elektrik, Türen, schlüsselfertig"
           },
           "price": "12500",
           "priceCurrency": "EUR"
@@ -112,7 +112,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Barrierefreies Bad",
-            "description": "Bodengleiche Dusche, Haltegriffe, Sitzmöglichkeiten – KfW-förderfähig"
+            "description": "Bodengleiche Dusche, Haltegriffe, Sitzmöglichkeiten, KfW-förderfähig"
           },
           "price": "18500",
           "priceCurrency": "EUR"
@@ -173,7 +173,7 @@
         "name": "Was kostet eine Badsanierung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ein 5–7 m² Komplettbad liegt typischerweise zwischen 12.500 € und 22.000 € brutto – abhängig von Sanitärqualität, Fliesenwahl und ob nur oberflächlich oder auf den Rohbau saniert wird. Ein barrierefreies Bad ab 18.500 €. Den verbindlichen Festpreis erhalten Sie nach der kostenlosen Vor-Ort-Begehung."
+          "text": "Ein 5 bis 7 m² Komplettbad liegt typischerweise zwischen 12.500 € und 22.000 € brutto, abhängig von Sanitärqualität, Fliesenwahl und ob nur oberflächlich oder auf den Rohbau saniert wird. Ein barrierefreies Bad ab 18.500 €. Den verbindlichen Festpreis erhalten Sie nach der kostenlosen Vor-Ort-Begehung."
         }
       },
       {
@@ -181,7 +181,7 @@
         "name": "Wie lange dauert eine Badsanierung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ein Komplettbad ist in der Regel in 2–4 Wochen fertig. Ein reiner Duschtausch oder Wanne-raus-Dusche-rein in 3–5 Tagen. Wir koordinieren alle Gewerke selbst – daher keine Leerlaufzeiten zwischen Sanitär, Fliesen und Elektro."
+          "text": "Ein Komplettbad ist in der Regel in 2 bis 4 Wochen fertig. Ein reiner Duschtausch oder Wanne-raus-Dusche-rein in 3 bis 5 Tagen. Wir koordinieren alle Gewerke selbst, daher keine Leerlaufzeiten zwischen Sanitär, Fliesen und Elektro."
         }
       },
       {
@@ -189,7 +189,7 @@
         "name": "Können wir während der Badsanierung im Haus wohnen bleiben?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In fast allen Fällen ja. Bei nur einem Bad in der Wohnung stellen wir bei Bedarf eine mobile Toilette. Wir stauben ab, decken ab und arbeiten nur werktags zu üblichen Zeiten – damit Sie normal wohnen können."
+          "text": "In fast allen Fällen ja. Bei nur einem Bad in der Wohnung stellen wir bei Bedarf eine mobile Toilette. Wir stauben ab, decken ab und arbeiten nur werktags zu üblichen Zeiten, damit Sie normal wohnen können."
         }
       },
       {
@@ -197,7 +197,7 @@
         "name": "Übernehmen Sie Sanitär, Fliesen und Elektrik selbst?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja – alle drei Gewerke machen unsere eigenen 45 Mitarbeiter. Sie haben einen Ansprechpartner (Bauleiter) für das komplette Bad, nicht drei verschiedene Firmen mit unterschiedlichen Terminen."
+          "text": "Ja, alle drei Gewerke machen unsere eigenen 45 Mitarbeiter. Sie haben einen Ansprechpartner (Bauleiter) für das komplette Bad, nicht drei verschiedene Firmen mit unterschiedlichen Terminen."
         }
       },
       {
@@ -221,7 +221,7 @@
         "name": "Was, wenn beim Rückbau ein Schaden entdeckt wird?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir stoppen die Arbeit, dokumentieren mit Foto und stimmen mit Ihnen ab – bevor wir weitermachen. Kein stiller Aufschlag auf der Rechnung. Solche Fälle (z. B. undichte Steigleitung) sind selten, aber bei alter Substanz möglich – wir sind darauf vorbereitet."
+          "text": "Wir stoppen die Arbeit, dokumentieren mit Foto und stimmen mit Ihnen ab, bevor wir weitermachen. Kein stiller Aufschlag auf der Rechnung. Solche Fälle (z. B. undichte Steigleitung) sind selten, aber bei alter Substanz möglich, wir sind darauf vorbereitet."
         }
       },
       {

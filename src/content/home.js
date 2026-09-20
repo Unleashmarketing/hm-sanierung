@@ -53,7 +53,7 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
     const d=getD();
     if(d.fixed){
       sliderWrap.style.display='none';
-      rangeOut.innerHTML=fmt(Math.round(d.min*MWST))+'<span class="sep">—</span>'+fmt(Math.round(d.max*MWST));
+      rangeOut.innerHTML=fmt(Math.round(d.min*MWST))+'<span class="sep">,</span>'+fmt(Math.round(d.max*MWST));
     } else {
       sliderWrap.style.display='';
       const qty=parseFloat(slider.value)||0;
@@ -61,7 +61,7 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
       slider.max=d.sliderMax; slider.step=d.sliderStep;
       if(parseFloat(slider.value)>d.sliderMax) slider.value=Math.round(d.sliderMax/2);
       sliderLabel.innerHTML=d.label+' in '+u+' <span class="val">'+slider.value+' '+u+'</span>';
-      rangeOut.innerHTML=fmt(Math.round(qty*d.min*MWST))+'<span class="sep">—</span>'+fmt(Math.round(qty*d.max*MWST));
+      rangeOut.innerHTML=fmt(Math.round(qty*d.min*MWST))+'<span class="sep">,</span>'+fmt(Math.round(qty*d.max*MWST));
     }
   }
   allTypes.forEach(l=>{l.addEventListener('click',function(){allTypes.forEach(x=>x.classList.remove('active'));this.classList.add('active');this.querySelector('input').checked=true;active=this;update()})});

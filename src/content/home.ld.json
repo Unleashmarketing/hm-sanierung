@@ -88,7 +88,7 @@
       "reviewCount": "180",
       "bestRating": "5"
     },
-    "priceRange": "€€–€€€",
+    "priceRange": "€€ bis €€€",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -110,7 +110,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Komplettsanierung",
-            "description": "Wohnung oder Haus komplett saniert — alle Gewerke aus einer Hand"
+            "description": "Wohnung oder Haus komplett saniert, alle Gewerke aus einer Hand"
           },
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
@@ -189,7 +189,7 @@
         "name": "Was kostet eine Komplettsanierung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Typischerweise 800–1.500 € pro m² Wohnfläche, je nach Substanz, Materialwahl und Ausstattung. Eine 80 m² Wohnung liegt im Bereich 64.000–120.000 €. Den exakten Festpreis erhalten Sie nach der kostenlosen Vor-Ort-Begehung."
+          "text": "Typischerweise 800 bis 1.500 € pro m² Wohnfläche, je nach Substanz, Materialwahl und Ausstattung. Eine 80 m² Wohnung liegt im Bereich 64.000 bis 120.000 €. Den exakten Festpreis erhalten Sie nach der kostenlosen Vor-Ort-Begehung."
         }
       },
       {
@@ -197,7 +197,7 @@
         "name": "Wie schnell kann begonnen werden?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Der Vor-Ort-Termin ist binnen 48 Stunden möglich. Nach Auftragsannahme starten wir in 4–8 Wochen, je nach Projektgröße. Bei Notfällen (Wasserschaden) oft innerhalb einer Woche."
+          "text": "Der Vor-Ort-Termin ist binnen 48 Stunden möglich. Nach Auftragsannahme starten wir in 4 bis 8 Wochen, je nach Projektgröße. Bei Notfällen (Wasserschaden) oft innerhalb einer Woche."
         }
       },
       {
@@ -205,7 +205,7 @@
         "name": "Übernehmen Sie alle Gewerke selbst?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja — Sanitär, Elektrik, Trockenbau, Boden, Maler, Fliesen und Entrümpelung machen wir mit unseren 45 Mitarbeitern. Nur bei speziellen Anforderungen arbeiten wir mit langjährigen Partnern."
+          "text": "Ja, Sanitär, Elektrik, Trockenbau, Boden, Maler, Fliesen und Entrümpelung machen wir mit unseren 45 Mitarbeitern. Nur bei speziellen Anforderungen arbeiten wir mit langjährigen Partnern."
         }
       },
       {
@@ -213,7 +213,7 @@
         "name": "Gibt es einen Festpreis oder Abrechnung nach Aufwand?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ausschließlich Festpreise, schriftlich nach Vor-Ort-Begehung. Verbindlich — auch wenn die Arbeit länger dauert. Nur bei nachträglichen Änderungswünschen vereinbaren wir gesondert."
+          "text": "Ausschließlich Festpreise, schriftlich nach Vor-Ort-Begehung. Verbindlich, auch wenn die Arbeit länger dauert. Nur bei nachträglichen Änderungswünschen vereinbaren wir gesondert."
         }
       },
       {
@@ -221,7 +221,7 @@
         "name": "Können wir während der Sanierung wohnen bleiben?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Bei Badsanierung oder Malerarbeiten oft möglich. Bei Kernsanierung empfehlen wir den Auszug für 3–8 Wochen. Das besprechen wir ehrlich im Vor-Ort-Termin."
+          "text": "Bei Badsanierung oder Malerarbeiten oft möglich. Bei Kernsanierung empfehlen wir den Auszug für 3 bis 8 Wochen. Das besprechen wir ehrlich im Vor-Ort-Termin."
         }
       },
       {
@@ -229,7 +229,7 @@
         "name": "Übernehmen Sie auch nur Teilleistungen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Selbstverständlich — einzelne Gewerke wie nur die Bodenverlegung oder nur die Malerarbeiten."
+          "text": "Selbstverständlich, einzelne Gewerke wie nur die Bodenverlegung oder nur die Malerarbeiten."
         }
       },
       {

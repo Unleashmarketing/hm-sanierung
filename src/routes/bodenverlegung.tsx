@@ -42,7 +42,7 @@ export const Route = createFileRoute("/bodenverlegung")({
       {
         property: "og:description",
         content:
-          "Ihr neuer Boden. Sauber verlegt. Parkett, Vinyl, Laminat und Fliesen aus einer Hand – verbindlicher Festpreis, fertig in 2–5 Tagen.",
+          "Ihr neuer Boden. Sauber verlegt. Parkett, Vinyl, Laminat und Fliesen aus einer Hand, verbindlicher Festpreis, fertig in 2 bis 5 Tagen.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
