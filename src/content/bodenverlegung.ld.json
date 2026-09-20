@@ -75,7 +75,7 @@
         "name": "Worms"
       }
     ],
-    "description": "Professionelle Bodenverlegung in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn: Parkett, Vinyl, Laminat und Fliesen inklusive Untergrundvorbereitung, Trittschalldämmung und Fußleisten – mit Festpreisgarantie und eigenen Handwerkern.",
+    "description": "Professionelle Bodenverlegung in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn: Parkett, Vinyl, Laminat und Fliesen inklusive Untergrundvorbereitung, Trittschalldämmung und Fußleisten, mit Festpreisgarantie und eigenen Handwerkern.",
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "EUR",
@@ -173,7 +173,7 @@
         "name": "Was kostet Bodenverlegung pro Quadratmeter?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Inklusive Material, Trittschalldämmung und Verlegung: Laminat ab ca. 35 €/m², Vinyl ab ca. 55 €/m², Parkett ab ca. 95 €/m² und Fliesen ab ca. 68 €/m² – jeweils brutto. Der verbindliche Festpreis steht nach der kostenlosen Vor-Ort-Begehung fest."
+          "text": "Inklusive Material, Trittschalldämmung und Verlegung: Laminat ab ca. 35 €/m², Vinyl ab ca. 55 €/m², Parkett ab ca. 95 €/m² und Fliesen ab ca. 68 €/m², jeweils brutto. Der verbindliche Festpreis steht nach der kostenlosen Vor-Ort-Begehung fest."
         }
       },
       {
@@ -181,7 +181,7 @@
         "name": "Wie lange dauert die Verlegung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ein typisches Zimmer ist an einem Tag fertig, eine komplette Wohnung meist in 2–5 Tagen. Fliesen und verklebtes Parkett brauchen etwas länger, weil Kleber und Fugen aushärten müssen."
+          "text": "Ein typisches Zimmer ist an einem Tag fertig, eine komplette Wohnung meist in 2 bis 5 Tagen. Fliesen und verklebtes Parkett brauchen etwas länger, weil Kleber und Fugen aushärten müssen."
         }
       },
       {
@@ -197,7 +197,7 @@
         "name": "Funktioniert das mit Fußbodenheizung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja – Vinyl, Fliesen und viele Parkette sind für Fußbodenheizung geeignet. Entscheidend ist der richtige Wärmedurchlasswiderstand."
+          "text": "Ja, Vinyl, Fliesen und viele Parkette sind für Fußbodenheizung geeignet. Entscheidend ist der richtige Wärmedurchlasswiderstand."
         }
       },
       {
