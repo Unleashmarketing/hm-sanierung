@@ -1,1 +1,46 @@
-[{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "HM Sanierung GmbH", "image": "", "address": {"@type": "PostalAddress", "streetAddress": "Im Hagen 4", "postalCode": "69181", "addressLocality": "Leimen", "addressCountry": "DE"}, "telephone": "+49 162 6151832", "email": "info@hm-sanierung.com", "areaServed": ["Heidelberg", "Mannheim", "Leimen", "Schwetzingen", "Weinheim", "Sinsheim", "Heilbronn", "Rhein-Neckar-Kreis"], "priceRange": "\u20ac\u20ac"}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HM Sanierung GmbH",
+    "image": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Im Hagen 4",
+      "postalCode": "69181",
+      "addressLocality": "Leimen",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 162 6151832",
+    "email": "info@hm-sanierung.com",
+    "areaServed": [
+      "Heidelberg",
+      "Mannheim",
+      "Leimen",
+      "Schwetzingen",
+      "Weinheim",
+      "Sinsheim",
+      "Heilbronn",
+      "Rhein-Neckar-Kreis",
+      "Ludwigshafen",
+      "Frankenthal",
+      "Neustadt an der Weinstraße",
+      "Worms"
+    ],
+    "priceRange": "€€"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "In welchen Städten und Regionen ist HM Sanierung tätig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir sind in der gesamten Metropolregion Rhein-Neckar, in der Vorderpfalz und im Raum Heilbronn tätig. Dazu gehören unter anderem Heidelberg, Mannheim, Ludwigshafen, Frankenthal, Neustadt an der Weinstraße, Worms, Leimen, Schwetzingen, Weinheim, Sinsheim, Walldorf und Wiesloch. Fragen Sie uns auch gerne an, wenn Ihr Ort nicht aufgeführt ist."
+        }
+      }
+    ]
+  }
+]
