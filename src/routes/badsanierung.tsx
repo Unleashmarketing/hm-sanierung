@@ -11,17 +11,17 @@ export const Route = createFileRoute("/badsanierung")({
     meta: [
       {
         title:
-          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis, fertig in 2\u20134 Wochen | HM Sanierung",
+          "Badsanierung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung",
       },
       {
         name: "description",
         content:
-          "Badsanierung in Heidelberg, Mannheim und Heilbronn: Komplettbad, Walk-in-Dusche und barrierefreies Bad aus einer Hand. Verbindlicher Festpreis, eigene Handwerker, fertig in 2\u20134 Wochen \u2013 Sie k\u00f6nnen wohnen bleiben.",
+          "Badsanierung in Heidelberg, Mannheim, Ludwigshafen, Frankenthal, Neustadt, Worms und Heilbronn: Komplettbad, Walk-in-Dusche und barrierefreies Bad.",
       },
       {
         property: "og:title",
         content:
-          "Badsanierung Heidelberg, Mannheim & Heilbronn \u2013 Festpreis | HM Sanierung",
+          "Badsanierung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung",
       },
       {
         property: "og:description",

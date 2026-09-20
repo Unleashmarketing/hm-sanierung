@@ -27,17 +27,17 @@ export const Route = createFileRoute("/bodenverlegung")({
     meta: [
       {
         title:
-          "Bodenverlegung Heidelberg, Mannheim & Heilbronn – Festpreis, fertig in 2–5 Tagen | HM Sanierung",
+          "Bodenverlegung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung",
       },
       {
         name: "description",
         content:
-          "Bodenverlegung in Heidelberg, Mannheim und Heilbronn: Parkett, Vinyl, Laminat und Fliesen inklusive Untergrund und Fußleisten. Verbindlicher Festpreis, eigene Handwerker, fertig in 2–5 Tagen.",
+          "Bodenverlegung in Heidelberg, Mannheim, Ludwigshafen, Frankenthal, Neustadt an der Weinstraße, Worms und Heilbronn: Parkett, Vinyl, Laminat und Fliesen inklusive Untergrund und Fußleisten. Verbindlicher Festpreis.",
       },
       {
         property: "og:title",
         content:
-          "Bodenverlegung Heidelberg, Mannheim & Heilbronn – Festpreis | HM Sanierung",
+          "Bodenverlegung Rhein-Neckar, Vorderpfalz & Heilbronn | HM Sanierung",
       },
       {
         property: "og:description",
