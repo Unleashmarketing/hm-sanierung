@@ -11,4 +11,5 @@
 
 ## Project architecture
 
-- Above-the-fold project imagery uses compressed CDN WebP assets; only the visible slide loads immediately to protect page speed.
+- Above-the-fold project imagery uses compressed CDN WebP assets; only the visible slide loads immediately, and mobile gets 720x450 crops via picture/srcset, to protect page speed.
+- gtag.js loads after idle or first interaction, not in the initial render, to keep it off the critical path.
