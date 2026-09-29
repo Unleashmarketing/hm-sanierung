@@ -627,3 +627,4 @@ footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:56px 0 24px;
 .proj-dot,.hero-dot{box-sizing:content-box; padding:9px !important; background-clip:content-box !important; border:none}
 .proj-dots,.hero-dots{gap:0 !important}
 .hero-label{background:rgba(0,0,0,0.55) !important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

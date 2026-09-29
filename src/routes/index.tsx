@@ -29,6 +29,9 @@ export const Route = createFileRoute("/")({
         rel: "preload",
         as: "image",
         href: "/__l5e/assets-v1/981a8e0a-bf50-49d6-9a3e-3ac22fdee09e/Wohnung-optimized.webp",
+        imageSrcSet:
+          "/__l5e/assets-v1/a605954f-da68-4a77-86ec-5a7ceeb14789/Wohnung-560.webp 560w, /__l5e/assets-v1/981a8e0a-bf50-49d6-9a3e-3ac22fdee09e/Wohnung-optimized.webp 1000w",
+        imageSizes: "(max-width: 640px) 92vw, (max-width: 1100px) 50vw, 560px",
         fetchPriority: "high",
         type: "image/webp",
       },
