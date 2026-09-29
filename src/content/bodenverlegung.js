@@ -107,3 +107,5 @@ if (calcType && calcSize) {
   });
   updateCalc();
 }
+
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".nav-links a");if(!a)return;var t=document.getElementById("navToggle");if(t)t.checked=false;});
