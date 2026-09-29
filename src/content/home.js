@@ -19,7 +19,7 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   const loadDeferredSlides = () => {
     imgs.forEach(img => {
       if(img.dataset.src){
-        if(img.dataset.srcset){img.srcset = img.dataset.srcset; delete img.dataset.srcset;} img.src = img.dataset.src;
+        const src=img.previousElementSibling; if(src && src.dataset.srcset){src.srcset=src.dataset.srcset; delete src.dataset.srcset;} img.src = img.dataset.src;
         delete img.dataset.src;
       }
     });
