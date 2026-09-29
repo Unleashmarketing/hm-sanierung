@@ -119,8 +119,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='${FONT_CSS}';document.head.appendChild(l);})();`,
       },
       {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-SMCEYF0863",
-        async: true,
+        // Load gtag.js after the page is idle or on first interaction to keep it off the critical path.
+        children: `(function(){var done=false;function load(){if(done)return;done=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-SMCEYF0863';document.head.appendChild(s);}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){window.addEventListener(e,load,{once:true,passive:true});});
+window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(load,{timeout:3500});}else{setTimeout(load,2500);}});})();`,
       },
       {
         children: `
