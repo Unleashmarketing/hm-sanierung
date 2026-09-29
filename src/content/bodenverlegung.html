@@ -227,7 +227,7 @@
       <div class="calc-form">
         <div class="calc-field">
           <label for="calc-type">Bodenbelag</label>
-          <select id="calc-type">
+          <select id="calc-type" aria-label="Art der Arbeiten">
             <option value="laminat">Laminat</option>
             <option value="vinyl">Vinyl / Designboden</option>
             <option value="parkett">Parkett</option>
@@ -236,7 +236,7 @@
         </div>
         <div class="calc-field">
           <label for="calc-size">Fläche: <span id="calc-size-value">40</span> m²</label>
-          <input type="range" id="calc-size" min="10" max="150" value="40" step="5" aria-valuemin="10" aria-valuemax="150">
+          <input type="range" id="calc-size" aria-label="Fläche in Quadratmetern" min="10" max="150" value="40" step="5" aria-valuemin="10" aria-valuemax="150">
           <div class="calc-hint">10 bis 150 m², für größere Flächen bitten wir um ein Gespräch</div>
         </div>
         <div class="calc-field">
@@ -297,19 +297,19 @@
     <div class="process-grid fade-up">
       <div class="step">
         <div class="step-num"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.12 4.18 2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <h4>Anfrage</h4><p>Kurzer Anruf oder das Formular unten. Wir melden uns binnen 48 Stunden.</p><div class="step-time">Heute</div>
+        <h3>Anfrage</h3><p>Kurzer Anruf oder das Formular unten. Wir melden uns binnen 48 Stunden.</p><div class="step-time">Heute</div>
       </div>
       <div class="step">
         <div class="step-num"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div>
-        <h4>Vor-Ort-Termin</h4><p>Wir messen aus, prüfen den Untergrund und bringen Muster mit, kostenlos.</p><div class="step-time">In 48 h</div>
+        <h3>Vor-Ort-Termin</h3><p>Wir messen aus, prüfen den Untergrund und bringen Muster mit, kostenlos.</p><div class="step-time">In 48 h</div>
       </div>
       <div class="step">
         <div class="step-num"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-        <h4>Festpreis-Angebot</h4><p>Schriftlich, aufgeschlüsselt nach Positionen. Verbindlich, ohne spätere Zuschläge.</p><div class="step-time">In 1 Woche</div>
+        <h3>Festpreis-Angebot</h3><p>Schriftlich, aufgeschlüsselt nach Positionen. Verbindlich, ohne spätere Zuschläge.</p><div class="step-time">In 1 Woche</div>
       </div>
       <div class="step">
         <div class="step-num"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
-        <h4>Verlegung &amp; Übergabe</h4><p>Eigene Handwerker, besenreine Übergabe, Materialreste nehmen wir mit.</p><div class="step-time">1 bis 5 Tage</div>
+        <h3>Verlegung &amp; Übergabe</h3><p>Eigene Handwerker, besenreine Übergabe, Materialreste nehmen wir mit.</p><div class="step-time">1 bis 5 Tage</div>
       </div>
     </div>
   </div>
@@ -356,7 +356,7 @@
         </div>
         <div class="field"><label>E-Mail</label><input type="email" name="Email" required placeholder="ihre@email.de"></div>
         <div class="field"><label>Welcher Bodenbelag?</label>
-          <select name="Belag" required>
+          <select name="Belag" aria-label="Bodenbelag" required>
             <option value="">Bitte auswählen…</option>
             <option>Parkett</option>
             <option>Vinyl / Designboden</option>
@@ -383,16 +383,16 @@
       <p>Sanierung &amp; Renovierung in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn. Seit 22 Jahren, Festpreis garantiert.</p>
     </div>
     <div>
-      <h5>Leistungen</h5>
+      <h2>Leistungen</h2>
       <ul><li><a href="/badsanierung">Badsanierung</a></li><li><a href="/#anfrage">Kernsanierung</a></li><li><a href="/bodenverlegung">Bodenverlegung</a></li><li><a href="/#anfrage">Trockenbau</a></li><li><a href="/#anfrage">Malerarbeiten</a></li><li><a href="/entruempelung">Entrümpelung</a></li></ul>
     </div>
     <div>
-      <h5>Kontakt</h5>
+      <h2>Kontakt</h2>
       <p>Heinzelmänner GmbH<br>Im Hagen 4<br>69181 Leimen</p>
       <p style="margin-top:10px"><a href="tel:+4962249689465" style="color:#fff">06224 9689465</a><br><a href="mailto:info@hm-sanierung.com">info@hm-sanierung.com</a></p>
     </div>
     <div>
-      <h5>Rechtliches</h5>
+      <h2>Rechtliches</h2>
       <ul><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutz</a></li><li><a href="/agb">AGB</a></li></ul>
     </div>
   </div>

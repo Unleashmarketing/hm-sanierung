@@ -2,12 +2,12 @@
   --ink:#0A0A0A;
   --ink-soft:#1A1A1A;
   --muted:#555;
-  --muted-light:#888;
+  --muted-light:#6b6b6b;
   --line:#E5E3DC;
   --line-soft:#EDEAE2;
   --paper:#FAFAF7;
   --paper-2:#F4F1E9;
-  --accent:#D86200;
+  --accent:#A84E00;
   --accent-soft:#FFF1E2;
   --max:1200px;
   --gutter:32px;
@@ -217,7 +217,7 @@ section{padding:96px 0; position:relative}
   .nav-phone-link svg{width:16px; height:16px; stroke:var(--accent); stroke-width:2.2; fill:none; flex-shrink:0}
   .mobile-contact-group .btn.nav-mobile-only{
     margin-top:0; background:var(--accent); border-color:var(--accent); color:#fff;
-    box-shadow:0 4px 14px rgba(216,98,0,0.25);
+    box-shadow:0 4px 14px rgba(168,78,0,0.25);
   }
 }
 .nav-right{display:flex; align-items:center; gap:14px; justify-self:end}
@@ -241,7 +241,7 @@ section{padding:96px 0; position:relative}
 }
 .btn:hover{background:var(--accent); transform:translateY(-1px)}
 .btn-accent{background:var(--accent)}
-.btn-accent:hover{background:#B85200}
+.btn-accent:hover{background:#8F4200}
 .btn-outline{background:transparent; color:var(--ink); border:1.5px solid var(--line)}
 .btn-outline:hover{border-color:var(--ink); background:var(--ink); color:#fff}
 .btn-light{background:#fff; color:var(--ink)}
@@ -365,7 +365,7 @@ section{padding:96px 0; position:relative}
 }
 .inline-cta p{font-size:clamp(1rem, 2vw, 1.25rem); font-weight:500; color:#fff}
 .inline-cta .btn{background:var(--accent)}
-.inline-cta .btn:hover{background:#B85200}
+.inline-cta .btn:hover{background:#8F4200}
 .inline-cta .btn-outline{background:transparent; border:1.5px solid rgba(255,255,255,0.3); color:#fff}
 .inline-cta .btn-outline:hover{background:#fff; color:var(--ink); border-color:#fff}
 
@@ -619,3 +619,11 @@ footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:56px 0 24px;
 .fade-up.d1{transition-delay:0.08s}
 .fade-up.d2{transition-delay:0.16s}
 .fade-up.d3{transition-delay:0.24s}
+/* a11y: heading levels */
+.usp-card h3,.step h3{font-size:1rem; font-weight:600; line-height:1.25; margin-bottom:6px}
+.usp-card h3{font-size:1.08rem; margin-bottom:8px}
+.f-top h2{color:#fff; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px; font-weight:600; font-family:inherit}
+/* a11y: larger tap targets for dots */
+.proj-dot,.hero-dot{box-sizing:content-box; padding:9px !important; background-clip:content-box !important; border:none}
+.proj-dots,.hero-dots{gap:0 !important}
+.hero-label{background:rgba(0,0,0,0.55) !important}
