@@ -15,7 +15,24 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   const dots = document.querySelectorAll('.hero-dot');
   if(!slides.length || !imgs.length) return;
   let cur = 0;
+
+  const loadDeferredSlides = () => {
+    imgs.forEach(img => {
+      if(img.dataset.src){
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+      }
+    });
+  };
+
+  if('requestIdleCallback' in window){
+    window.requestIdleCallback(loadDeferredSlides, {timeout:2500});
+  } else {
+    setTimeout(loadDeferredSlides, 1500);
+  }
+
   setInterval(() => {
+    loadDeferredSlides();
     imgs[cur].classList.remove('active');
     slides[cur].classList.remove('active');
     dots[cur].classList.remove('active');
