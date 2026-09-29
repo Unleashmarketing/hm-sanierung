@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Above-the-fold project imagery uses compressed CDN WebP assets; only the visible slide loads immediately to protect page speed.

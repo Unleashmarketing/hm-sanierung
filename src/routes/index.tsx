@@ -23,7 +23,16 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hm-sanierung.com/" }],
+    links: [
+      { rel: "canonical", href: "https://hm-sanierung.com/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/981a8e0a-bf50-49d6-9a3e-3ac22fdee09e/Wohnung-optimized.webp",
+        fetchPriority: "high",
+        type: "image/webp",
+      },
+    ],
   }),
   component: Page,
 });
