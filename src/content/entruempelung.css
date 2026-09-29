@@ -975,16 +975,21 @@ textarea { resize: vertical; min-height: 80px; }
   display: none;
   gap: 10px;
   z-index: 999;
+  background: #fff;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 .floating-ctas .btn {
   flex: 1;
   padding: 14px 18px;
   font-size: 0.95rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: none;
 }
 @media (max-width: 720px) {
   .floating-ctas { display: flex; }
-  body { padding-bottom: 80px; }
+  body { padding-bottom: 96px; }
 }
 
 /* =========================================================
@@ -1135,7 +1140,7 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
     right: 12px;
   }
   .floating-ctas .btn { min-height: 52px; }
-  body { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* ============ NAV (Homepage-Stil) ============ */
