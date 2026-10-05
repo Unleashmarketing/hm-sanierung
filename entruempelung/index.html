@@ -285,11 +285,11 @@ section { padding: 72px 0; }
 }
 .hero-trust {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   padding-top: 24px;
   border-top: 1px solid var(--border);
-  max-width: 560px;
+  max-width: 640px;
 }
 @media (max-width: 520px) { .hero-trust { grid-template-columns: 1fr 1fr; } }
 .hero-trust-item strong {
@@ -941,6 +941,9 @@ textarea { resize: vertical; min-height: 80px; }
   text-align: center;
 }
 .final-cta h2 { color: #fff; margin-bottom: 18px; }
+.final-cta .rating-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; color: rgba(255,255,255,0.8); letter-spacing: 0.02em; margin-bottom: 16px; }
+.final-cta .rating-badge .stars { color: var(--accent); letter-spacing: 1px; }
+.final-cta .rating-badge strong { color: #fff; }
 .final-cta p {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.85);
@@ -1095,7 +1098,7 @@ textarea:focus-visible {
 /* --- Trust-Zahlen: sauberes Raster statt Waisenzeile --- */
 .hero-trust { gap: 20px 16px; }
 @media (max-width: 520px) {
-  .hero-trust { grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: left; }
+  .hero-trust { grid-template-columns: repeat(2, 1fr); gap: 12px; text-align: left; }
   .hero-trust-item strong { font-size: 1.25rem; }
   .hero-trust-item span { font-size: 0.76rem; line-height: 1.35; display: block; }
 }
@@ -1388,7 +1391,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
   <div class="nav-inner">
     <a href="/" class="logo">
       <img src="/img/hm-logo-sm.webp" alt="HM Sanierung Logo" class="logo-img" width="160" height="54">
-      <h1 class="logo-text">HM Sanierung</h1>
+      <p class="logo-text">HM Sanierung</p>
     </a>
     <input type="checkbox" id="navToggle" class="nav-toggle" hidden>
     <div class="nav-links">
@@ -1424,7 +1427,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           0162 6151832
         </a>
-        <a href="#anfrage" class="btn btn-primary nav-mobile-only">Festpreis anfragen</a>
+        <a href="#anfrage" class="btn btn-primary nav-mobile-only">Festpreis sichern</a>
       </div>
     </div>
     <label for="navToggle" class="nav-burger" title="Menü öffnen"><span></span><span></span><span></span><b class="sr-only">Menü öffnen</b></label>
@@ -1433,7 +1436,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>0162 6151832</span>
       </a>
-      <a href="#anfrage" class="btn btn-primary">Festpreis anfragen</a>
+      <a href="#anfrage" class="btn btn-primary">Festpreis sichern</a>
     </div>
   </div>
 </nav>
@@ -1445,7 +1448,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
   <div class="container hero-grid">
     <div>
       <span class="hero-eyebrow">Entrümpelung · Leimen · Heidelberg · Mannheim · Rhein-Neckar</span>
-      <h2 class="hero-title">Entrümpelung in Leimen, Heidelberg, Mannheim &amp; Rhein-Neckar, <em>Festpreis binnen 24 Stunden.</em></h2>
+      <h1 class="hero-title">Entrümpelung in Leimen, Heidelberg, Mannheim &amp; Rhein-Neckar, <em>Festpreis binnen 24 Stunden.</em></h1>
       <p class="hero-lede">Wir räumen Ihre Wohnung, Ihr Haus, Keller oder Dachboden besenrein, diskret und zum Festpreis. Von unserem Stammsitz in Leimen aus räumen wir in Heidelberg, Mannheim, Ludwigshafen, Schwetzingen, Weinheim und der gesamten Rhein-Neckar-Region.</p>
 
 
@@ -1461,6 +1464,10 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         <div class="hero-trust-item">
           <strong>24 h</strong>
           <span>Bis zum Festpreisangebot</span>
+        </div>
+        <div class="hero-trust-item">
+          <strong>4,9 ★</strong>
+          <span>aus 180+ Bewertungen</span>
         </div>
       </div>
     </div>
@@ -1507,7 +1514,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
           <label for="f-msg">Anmerkung (optional)</label>
           <textarea id="f-msg" name="Anmerkung" placeholder="z. B. gewünschter Termin, Besonderheiten"></textarea>
         </div>
-        <button type="submit" onclick="gtag('event', 'conversion', {'send_to': 'AW-16711717313/WFIyCLuJ39ccEMGj4qA-'});" class="btn btn-primary btn-lg btn-block">Angebot anfordern</button>
+        <button type="submit" onclick="gtag('event', 'conversion', {'send_to': 'AW-16711717313/WFIyCLuJ39ccEMGj4qA-'});" class="btn btn-primary btn-lg btn-block">Festpreis sichern</button>
         <p class="form-note" style="display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B5B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           Vertraulich behandelt · keine Weitergabe
@@ -1554,7 +1561,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         <li>Renovierung im Anschluss</li>
       </ul>
       <div style="margin-top:24px;">
-        <a href="#anfrage" class="btn btn-primary btn-block">Jetzt kostenlos anfragen</a>
+        <a href="#anfrage" class="btn btn-primary btn-block">Festpreis sichern</a>
       </div>
     </div>
   </div>
@@ -1661,7 +1668,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
           <li>Fachgerechte Entsorgung</li>
           <li>Besenreine Übergabe</li>
         </ul>
-        <a href="#anfrage" class="btn btn-ghost btn-block">Angebot anfragen</a>
+        <a href="#anfrage" class="btn btn-ghost btn-block">Festpreis sichern</a>
       </div>
       <div class="price-card featured">
         <h3>Standard</h3>
@@ -1673,7 +1680,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
           <li>Besenreine Übergabe</li>
           <li>Anrechnung von Wertgegenständen möglich</li>
         </ul>
-        <a href="#anfrage" class="btn btn-primary btn-block">Angebot anfragen</a>
+        <a href="#anfrage" class="btn btn-primary btn-block">Festpreis sichern</a>
       </div>
       <div class="price-card">
         <h3>Komplett</h3>
@@ -1685,7 +1692,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
           <li>Optional: Renovierung im Anschluss</li>
           <li>Feste Ansprechpartner</li>
         </ul>
-        <a href="#anfrage" class="btn btn-ghost btn-block">Angebot anfragen</a>
+        <a href="#anfrage" class="btn btn-ghost btn-block">Festpreis sichern</a>
       </div>
     </div>
     <p class="price-note">
@@ -1887,6 +1894,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
 <!-- Final CTA -->
 <section class="final-cta">
   <div class="container">
+    <p class="rating-badge"><span class="stars">★★★★★</span> <strong>4,9/5</strong> aus über 180 Bewertungen</p>
     <h2>Lassen Sie uns kurz sprechen.</h2>
     <p>In einem 5-Minuten-Telefonat klären wir, was zu räumen ist, wann Sie es brauchen und wie wir Ihnen am schnellsten helfen können. Unverbindlich und kostenlos.</p>
     <div class="btns">
