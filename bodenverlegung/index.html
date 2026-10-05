@@ -658,7 +658,291 @@ footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:56px 0 24px;
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 @media (max-width:980px){.nav-drop:hover .nav-drop-panel,.nav-drop:focus-within .nav-drop-panel{transform:none}}
-@media (max-width:980px){.nav-drop-link:hover::before{background:var(--line)}}</style>
+@media (max-width:980px){.nav-drop-link:hover::before{background:var(--line)}}
+
+/* ==============================================================
+   BAD-SANIERUNG · additive Styles
+   Setzt auf home.css auf (gleiche Tokens, Nav, Footer, Buttons).
+   Nur was diese Seite eigenes braucht, steht hier drin.
+   ============================================================== */
+
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb{
+  padding:calc(var(--ticker-h) + 92px) 0 0;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+.breadcrumb ol{
+  list-style:none; display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0; padding:0;
+}
+.breadcrumb li{display:inline-flex; align-items:center; gap:8px}
+.breadcrumb li + li::before{
+  content:"›"; color:var(--muted-light); font-size:1rem; line-height:1;
+}
+.breadcrumb a{color:var(--muted); transition:color 0.2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb li[aria-current]{color:var(--ink); font-weight:500}
+
+/* ---------- HERO (eigenes Layout, ruhiger als Home-Hero) ---------- */
+.bad-hero{
+  padding:32px 0 96px;
+}
+@media(max-width:880px){.bad-hero{padding:24px 0 64px}}
+
+.bad-hero-grid{
+  max-width:var(--max); margin:0 auto; padding:0 var(--gutter);
+  display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;
+}
+@media(max-width:960px){.bad-hero-grid{grid-template-columns:1fr; gap:40px}}
+
+.bad-hero-copy .hero-title{margin-top:6px; margin-bottom:20px}
+.bad-hero-copy .hero-lede{
+  font-size:clamp(1.02rem, 1.3vw, 1.15rem);
+  color:var(--muted);
+  max-width:560px;
+  margin-bottom:32px;
+}
+.bad-hero-copy .hero-lede strong{color:var(--ink); font-weight:600}
+.bad-hero-copy .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:40px}
+
+.bad-hero-trust{
+  display:grid; grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:0; border-top:1px solid var(--line);
+  padding-top:24px; max-width:560px;
+}
+.bad-hero-trust > div{
+  display:flex; flex-direction:column; gap:4px;
+  padding-right:16px;
+}
+.bad-hero-trust > div + div{border-left:1px solid var(--line); padding-left:20px}
+.bad-hero-trust strong{
+  font-family:var(--heading); font-size:1.4rem; font-weight:700;
+  color:var(--ink); letter-spacing:-0.02em; line-height:1;
+}
+.bad-hero-trust span{font-size:0.78rem; color:var(--muted); letter-spacing:0.02em}
+@media(max-width:520px){
+  .bad-hero-trust strong{font-size:1.15rem}
+  .bad-hero-trust > div + div{padding-left:14px}
+}
+
+.bad-hero-visual{
+  position:relative;
+  aspect-ratio:4/5; max-height:520px;
+  max-width:440px; margin-left:auto; width:100%;
+  border-radius:14px; overflow:hidden;
+}
+@media(max-width:960px){.bad-hero-visual{margin:0 auto}}
+.hero-slider{
+  display:flex; height:100%;
+  overflow-x:auto; scroll-snap-type:x mandatory;
+  scrollbar-width:none; -ms-overflow-style:none;
+  scroll-behavior:smooth;
+  background:var(--line);
+}
+.hero-slider::-webkit-scrollbar{display:none}
+.hero-slide{flex:0 0 100%; scroll-snap-align:start; position:relative; opacity:1; transform:none; transition:none}
+.hero-slide img{width:100%; height:100%; object-fit:cover; display:block}
+.hero-slide .pmeta{
+  position:absolute; bottom:0; left:0; right:0; padding:42px 16px 42px;
+  background:linear-gradient(transparent, rgba(0,0,0,0.65)); color:#fff;
+}
+.hero-slide .ptag{
+  display:inline-block; font-size:0.6rem; letter-spacing:0.08em;
+  text-transform:uppercase; font-weight:600;
+  background:rgba(255,255,255,0.18); backdrop-filter:blur(6px);
+  padding:3px 8px; border-radius:5px; margin-bottom:5px;
+}
+.hero-slide .pname{font-size:0.82rem; font-weight:600; line-height:1.25}
+
+.hero-label{
+  position:absolute; top:16px; left:16px; z-index:10;
+  background:rgba(255,255,255,0.15); backdrop-filter:blur(10px);
+  padding:6px 14px; border-radius:8px;
+  font-size:0.7rem; font-weight:600; letter-spacing:0.08em;
+  text-transform:uppercase; color:#fff;
+}
+
+@media(max-width:640px){
+  .bad-hero-visual{padding-top:0; padding-bottom:8px}
+}
+.hero-dots{
+  position:absolute; top:16px; right:16px; bottom:auto; left:auto; z-index:10;
+  display:flex; justify-content:flex-end; align-items:center; gap:6px;
+  margin:0; min-height:auto;
+  background:rgba(255,255,255,0.15); backdrop-filter:blur(10px);
+  padding:8px 12px; border-radius:8px;
+}
+.hero-dot{
+  width:6px; height:6px; border-radius:50%; border:none; padding:0;
+  background:rgba(255,255,255,0.35); cursor:pointer;
+  transition:background 0.3s, width 0.3s;
+}
+.hero-dot.is-active{background:#fff; width:18px; border-radius:3px}
+@media(max-width:640px){
+  .hero-dots{top:16px; right:16px; gap:6px; padding:7px 11px}
+  .hero-label{top:16px; left:16px; font-size:0.7rem; padding:6px 14px}
+}
+
+/* ---------- PRINZIPIEN (Story-Kacheln, nicht Feature-Grid) ---------- */
+.bad-principles{background:var(--paper-2)}
+.principle-grid{
+  display:grid; grid-template-columns:repeat(2, 1fr);
+  gap:2px; background:var(--line); margin-top:40px;
+  border:1px solid var(--line); border-radius:6px; overflow:hidden;
+}
+@media(max-width:760px){.principle-grid{grid-template-columns:1fr}}
+.principle{
+  background:var(--paper); padding:36px 32px;
+  display:flex; flex-direction:column; gap:14px;
+}
+@media(max-width:520px){.principle{padding:28px 22px}}
+.pnum{
+  font-family:var(--heading); font-size:0.82rem; font-weight:600;
+  letter-spacing:0.14em; color:var(--accent);
+}
+.principle h3{margin-bottom:2px}
+.principle p{color:var(--muted); font-size:0.95rem; line-height:1.65}
+
+/* ---------- VARIANTEN ---------- */
+.variant-grid{
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:20px; margin-top:40px;
+}
+@media(max-width:1000px){.variant-grid{grid-template-columns:repeat(2, 1fr)}}
+@media(max-width:560px){.variant-grid{grid-template-columns:1fr}}
+
+.variant-card{
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:8px; overflow:hidden;
+  display:flex; flex-direction:column;
+  transition:border-color 0.2s, transform 0.2s;
+}
+.variant-card:hover{border-color:var(--ink-soft); transform:translateY(-2px)}
+.variant-img{aspect-ratio:4/3; overflow:hidden; background:var(--paper-2)}
+.variant-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease}
+.variant-card:hover .variant-img img{transform:scale(1.04)}
+.variant-body{padding:22px 22px 24px; display:flex; flex-direction:column; gap:10px; flex:1}
+.variant-body h3{font-size:1.1rem}
+.variant-body p{color:var(--muted); font-size:0.9rem; line-height:1.6; flex:1}
+.variant-foot{
+  display:flex; justify-content:space-between; align-items:center;
+  padding-top:14px; border-top:1px solid var(--line-soft);
+  margin-top:6px;
+}
+.variant-price{
+  font-family:var(--heading); font-weight:700; color:var(--ink);
+  font-size:1rem; letter-spacing:-0.01em;
+}
+.variant-time{
+  font-size:0.75rem; color:var(--muted);
+  background:var(--paper-2); padding:4px 10px; border-radius:100px;
+  letter-spacing:0.02em;
+}
+
+/* ---------- CASE / REFERENZ ---------- */
+.bad-case{background:var(--paper-2)}
+.case-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
+  margin-top:40px;
+}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr; gap:36px}}
+.case-visual{
+  border-radius:8px; overflow:hidden; background:var(--paper);
+  aspect-ratio:4/3;
+}
+.case-visual img{width:100%; height:100%; object-fit:cover; display:block}
+.case-facts{display:flex; flex-direction:column; gap:0}
+.case-row{
+  display:grid; grid-template-columns:130px 1fr; gap:16px;
+  padding:14px 0; border-bottom:1px solid var(--line);
+  align-items:baseline;
+}
+.case-row:first-child{padding-top:0}
+.cl{
+  font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+}
+.cv{color:var(--ink); font-size:0.95rem; line-height:1.5}
+.case-quote{
+  margin-top:28px; padding:22px 24px;
+  background:var(--paper); border-left:3px solid var(--accent);
+  border-radius:4px;
+  font-style:italic; color:var(--ink-soft); line-height:1.6;
+  font-size:0.98rem;
+}
+.case-quote cite{
+  display:block; margin-top:10px;
+  font-style:normal; font-size:0.82rem; color:var(--muted);
+}
+
+/* ---------- Hilfsklassen ---------- */
+.lf-alt{
+  margin-top:20px; font-size:0.9rem; color:var(--muted);
+}
+.lf-alt a{color:var(--ink); font-weight:600; border-bottom:1px solid var(--accent); padding-bottom:1px}
+.lf-alt a:hover{color:var(--accent)}
+
+/* ---------- PREIS-RECHNER ---------- */
+.bad-calc{background:var(--paper-2)}
+.calc-card{
+  display:grid; grid-template-columns:1.15fr 0.85fr; gap:0;
+  background:var(--paper); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  margin-top:40px;
+}
+@media(max-width:900px){.calc-card{grid-template-columns:1fr}}
+.calc-form{padding:44px; display:flex; flex-direction:column; gap:32px}
+@media(max-width:640px){.calc-form{padding:28px; gap:26px}}
+.calc-field{display:flex; flex-direction:column; gap:10px}
+.calc-field label{
+  font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase;
+  font-weight:600; color:var(--muted);
+}
+.calc-field select{
+  appearance:none; -webkit-appearance:none;
+  background:var(--paper-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 14px center / 18px no-repeat;
+  border:1px solid var(--line); border-radius:10px; padding:13px 44px 13px 16px;
+  font-family:inherit; font-size:1rem; color:var(--ink); cursor:pointer;
+  transition:border-color .2s, box-shadow .2s;
+}
+.calc-field select:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+.calc-hint{font-size:0.8rem; color:var(--muted-light); margin-top:-4px}
+
+/* range slider */
+.calc-field input[type="range"]{
+  -webkit-appearance:none; appearance:none; width:100%; height:6px;
+  background:var(--line); border-radius:100px; cursor:pointer;
+}
+.calc-field input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none; width:22px; height:22px; border-radius:50%;
+  background:var(--accent); border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  margin-top:-8px; transition:transform .15s;
+}
+.calc-field input[type="range"]::-webkit-slider-thumb:hover{transform:scale(1.1)}
+.calc-field input[type="range"]::-moz-range-thumb{
+  width:22px; height:22px; border-radius:50%; background:var(--accent);
+  border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+.calc-field input[type="range"]::-webkit-slider-runnable-track{height:6px; border-radius:100px; background:linear-gradient(90deg, var(--accent) var(--range-fill,0%), var(--line) var(--range-fill,0%))}
+
+/* segment buttons */
+.calc-segment{display:flex; gap:6px; background:var(--paper-2); padding:5px; border-radius:10px}
+.calc-segment button{
+  flex:1; padding:11px 14px; border:none; background:transparent; border-radius:8px;
+  font-family:inherit; font-size:0.92rem; font-weight:600; color:var(--muted); cursor:pointer;
+  transition:all .2s; white-space:nowrap;
+}
+.calc-segment button.is-active{background:var(--paper); color:var(--ink); box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.calc-segment button:hover:not(.is-active){color:var(--ink)}
+
+/* result panel */
+.calc-result{padding:44px; background:var(--ink); color:#fff; display:flex; flex-direction:column; justify-content:center; gap:12px}
+@media(max-width:640px){.calc-result{padding:32px 28px}}
+.calc-result-label{font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.55)}
+.calc-price{font-family:var(--heading); font-size:clamp(2rem, 5vw, 2.8rem); font-weight:700; letter-spacing:-0.03em; line-height:1; margin-top:2px}
+.calc-range{font-size:1.05rem; color:rgba(255,255,255,0.85); font-weight:500}
+.calc-note{font-size:0.86rem; color:rgba(255,255,255,0.55); line-height:1.55; margin-bottom:8px}
+.calc-result .btn{margin-top:auto; min-height:52px}
+.calc-result .btn:hover{transform:translateY(-1px)}</style>
 <script type="application/ld+json">[
   {
     "@context": "https://schema.org",
@@ -989,15 +1273,15 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
       <div class="hero-label">aktuelle Projekte</div>
       <div class="hero-slider" id="heroSlider" tabindex="0" aria-label="Aktuelle Projekte">
         <div class="hero-slide">
-          <img src="__BODEN1__" alt="Fischgrät-Parkett Heidelberg, frisch verlegte Eichendielen im Wohnzimmer" width="768" height="960">
+          <img src="https://images.pexels.com/photos/3952034/pexels-photo-3952034.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Fischgrät-Parkett Heidelberg, frisch verlegte Eichendielen im Wohnzimmer" width="768" height="960">
           <div class="pmeta"><span class="ptag">Parkett</span><div class="pname">Fischgrät-Eiche · Heidelberg</div></div>
         </div>
         <div class="hero-slide">
-          <img src="__BODEN2__" alt="Vinyl-Designboden Mannheim, grauer Designboden im renovierten Flur" loading="lazy" width="768" height="960">
+          <img src="https://images.pexels.com/photos/954655/pexels-photo-954655.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Vinyl-Designboden Mannheim, grauer Designboden im renovierten Flur" loading="lazy" width="768" height="960">
           <div class="pmeta"><span class="ptag">Vinyl</span><div class="pname">Designboden · Mannheim</div></div>
         </div>
         <div class="hero-slide">
-          <img src="__BODEN3__" alt="Klick-Laminat in Eichenoptik, heller, fugenarmer Boden in einem modernen Schlafzimmer" loading="lazy" width="768" height="960">
+          <img src="https://images.pexels.com/photos/8288962/pexels-photo-8288962.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Klick-Laminat in Eichenoptik, heller, fugenarmer Boden in einem modernen Schlafzimmer" loading="lazy" width="768" height="960">
           <div class="pmeta"><span class="ptag">Laminat</span><div class="pname">Klick-Laminat · Heilbronn</div></div>
         </div>
       </div>
@@ -1053,7 +1337,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
     </div>
     <div class="variant-grid fade-up">
       <div class="variant-card">
-        <div class="variant-img"><img src="__BELAG_PARKETT__" alt="Parkett, frisch verlegter Eichenparkettboden im Wohnzimmer" loading="lazy" width="768" height="960"></div>
+        <div class="variant-img"><img src="https://images.pexels.com/photos/3952034/pexels-photo-3952034.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Parkett, frisch verlegter Eichenparkettboden im Wohnzimmer" loading="lazy" width="768" height="960"></div>
         <div class="variant-body">
           <h3>Parkett</h3>
           <p>Echtes Holz, zeitlos und mehrfach renovierbar. Auf Wunsch Fischgrät oder Landhausdiele, geölt oder lackiert.</p>
@@ -1064,7 +1348,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         </div>
       </div>
       <div class="variant-card">
-        <div class="variant-img"><img src="__BELAG_VINYL__" alt="Vinyl & Designboden, grauer Vinylboden in Holzoptik im Flur" loading="lazy" width="768" height="960"></div>
+        <div class="variant-img"><img src="https://images.pexels.com/photos/954655/pexels-photo-954655.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Vinyl & Designboden, grauer Vinylboden in Holzoptik im Flur" loading="lazy" width="768" height="960"></div>
         <div class="variant-body">
           <h3>Vinyl &amp; Designboden</h3>
           <p>Robust, wasserfest und fußwarm, ideal für Küche, Flur und Familien mit Haustieren. Riesige Dekorauswahl.</p>
@@ -1075,7 +1359,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         </div>
       </div>
       <div class="variant-card">
-        <div class="variant-img"><img src="__BELAG_LAMINAT__" alt="Laminat, heller Klick-Laminatboden in Eichenoptik im Schlafzimmer" loading="lazy" width="768" height="960"></div>
+        <div class="variant-img"><img src="https://images.pexels.com/photos/8288962/pexels-photo-8288962.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Laminat, heller Klick-Laminatboden in Eichenoptik im Schlafzimmer" loading="lazy" width="768" height="960"></div>
         <div class="variant-body">
           <h3>Laminat</h3>
           <p>Preiswert, strapazierfähig und schnell verlegt. Die ehrliche Lösung für Mietwohnung, Kinderzimmer und Büro.</p>
@@ -1086,7 +1370,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
         </div>
       </div>
       <div class="variant-card">
-        <div class="variant-img"><img src="__BELAG_FLIESEN__" alt="Fliesen & Feinsteinzeug, großformatige helle Feinsteinzeugfliesen im Wohnbereich" loading="lazy" width="768" height="960"></div>
+        <div class="variant-img"><img src="https://images.pexels.com/photos/3337132/pexels-photo-3337132.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Fliesen & Feinsteinzeug, großformatige helle Feinsteinzeugfliesen im Wohnbereich" loading="lazy" width="768" height="960"></div>
         <div class="variant-body">
           <h3>Fliesen &amp; Feinsteinzeug</h3>
           <p>Großformatig, fugenarm, perfekt auf Fußbodenheizung. Inklusive Abdichtung in Feuchträumen und Silikonarbeiten.</p>
@@ -1154,7 +1438,7 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
     </div>
     <div class="case-grid fade-up">
       <div class="case-visual">
-        <img src="__BODEN2__" alt="Bodenverlegung Schwetzingen, fertig verlegter Vinyl-Designboden durch HM Sanierung" loading="lazy" width="768" height="960">
+        <img src="https://images.pexels.com/photos/954655/pexels-photo-954655.jpeg?auto=compress&cs=tinysrgb&w=768&h=960&fit=crop&fm=webp" alt="Bodenverlegung Schwetzingen, fertig verlegter Vinyl-Designboden durch HM Sanierung" loading="lazy" width="768" height="960">
       </div>
       <div class="case-facts">
         <div class="case-row"><span class="cl">Objekt</span><span class="cv">68 m², 3-Zimmer-Wohnung, 2. OG</span></div>
