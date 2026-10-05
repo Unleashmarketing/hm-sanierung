@@ -955,30 +955,26 @@ textarea { resize: vertical; min-height: 80px; }
 }
 
 /* ---------- Footer ---------- */
-.footer {
-  background: var(--navy-dark);
-  color: rgba(255,255,255,0.75);
-  padding: 40px 0 28px;
-  font-size: 0.9rem;
+footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:56px 0 24px; font-size:0.88rem}
+.f-top{
+  max-width:var(--max); margin:0 auto; padding:0 var(--gutter);
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:36px;
+  margin-bottom:40px; padding-bottom:36px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 36px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  margin-bottom: 20px;
-}
-@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
-.footer h4 { color: #fff; font-size: 0.92rem; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-.footer a { color: rgba(255,255,255,0.75); }
-.footer a:hover { color: var(--accent); }
-.footer ul { list-style: none; padding: 0; }
-.footer ul li { padding: 4px 0; }
-.footer-bottom {
-  text-align: center;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.5);
+@media(max-width:880px){.f-top{grid-template-columns:1fr 1fr; gap:24px}}
+@media(max-width:540px){.f-top{grid-template-columns:1fr}}
+.f-brand .logo-img{filter:brightness(0) invert(1); height:32px}
+.f-brand p{margin-top:12px; max-width:300px; line-height:1.6}
+.f-top h2{color:#fff; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px; font-weight:600; font-family:inherit}
+.f-top ul{list-style:none}
+.f-top li{margin-bottom:7px}
+.f-top a{color:rgba(255,255,255,0.55); transition:color 0.2s}
+.f-top a:hover{color:var(--accent)}
+.f-bottom{
+  max-width:var(--max); margin:0 auto; padding:0 var(--gutter);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  font-size:0.78rem;
 }
 
 
@@ -1037,7 +1033,7 @@ textarea:focus-visible {
 }
 
 /* --- Skip-Link-freundliche Tap-Targets --- */
-.footer ul li a { display: inline-block; padding: 6px 0; }
+.f-top ul li a { display: inline-block; padding: 6px 0; }
 
 /* --- Topbar kompakter, kein unruhiger Umbruch --- */
 .topbar { font-size: 0.82rem; }
@@ -1313,7 +1309,6 @@ input:invalid:not(:placeholder-shown) { border-color: #DC4C4C; }
 @media(max-width:720px) { .nav-phone span { display: none } }
 @media(max-width:980px) { .nav-right { display: none } }
 
-.footer h2 { color: #fff; font-size: 0.92rem; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
 .usp .eyebrow { color: #F28C38; }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
@@ -1910,30 +1905,30 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
 
 <!-- Footer -->
 </main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h2>Heinzelmänner GmbH</h2>
-        <p>
-          Hausmeister Dienste und Gebäude Service<br>
-          Im Hagen 4 · 69181 Leimen<br>
-          Tel: <a href="tel:+491626151832" onclick="return gtag_report_conversion('tel:+491626151832', 'AW-16711717313/DDnTCMPs4NccEMGj4qA-');">0162 6151832</a><br>E-Mail: <a href="mailto:info@hm-sanierung.com">info@hm-sanierung.com</a>
-        </p>
-      </div>
-      <div>
-        <h2>Rechtliches</h2>
-        <ul>
-          <li><a href="/impressum">Impressum</a></li>
-          <li><a href="/datenschutz">Datenschutz</a></li>
-          <li><a href="/agb">AGB</a></li>
-        </ul>
-      </div>
+<footer role="contentinfo">
+  <div class="f-top">
+    <div class="f-brand">
+      <a href="/" class="logo"><img src="/img/hm-logo-sm.webp" alt="HM Sanierung Logo" class="logo-img" width="96" height="32"></a>
+      <p>Sanierung &amp; Renovierung in der Metropolregion Rhein-Neckar, der Vorderpfalz und im Raum Heilbronn. Seit 22 Jahren, Festpreis garantiert.</p>
     </div>
-  <div class="footer-bottom">
-    © 2026 Heinzelmänner GmbH · Alle Rechte vorbehalten.
+    <div>
+      <h2>Leistungen</h2>
+      <ul><li><a href="/badsanierung">Badsanierung</a></li><li><a href="/#anfrage">Kernsanierung</a></li><li><a href="/bodenverlegung">Bodenverlegung</a></li><li><a href="/#anfrage">Trockenbau</a></li><li><a href="/#anfrage">Malerarbeiten</a></li><li><a href="/entruempelung">Entrümpelung</a></li></ul>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <p>Heinzelmänner GmbH<br>Im Hagen 4<br>69181 Leimen</p>
+      <p style="margin-top:10px"><a href="tel:+491626151832" style="color:#fff" onclick="return gtag_report_conversion('tel:+491626151832', 'AW-16711717313/DDnTCMPs4NccEMGj4qA-');">0162 6151832</a><br><a href="mailto:info@hm-sanierung.com">info@hm-sanierung.com</a></p>
+    </div>
+    <div>
+      <h2>Rechtliches</h2>
+      <ul><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutz</a></li><li><a href="/agb">AGB</a></li></ul>
+    </div>
   </div>
-</div>
+  <div class="f-bottom">
+    <div>© 2026 Heinzelmänner GmbH</div>
+    <div>USt-IdNr. DE 192 272 349 · Geschäftsführer Sascha Heck</div>
+  </div>
 </footer>
 
 <!-- Floating Mobile CTAs -->
