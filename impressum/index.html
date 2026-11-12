@@ -235,5 +235,92 @@ window.gtag_report_lead=function(send_to){gtag('event','conversion',{'send_to':s
 </div>
 </footer>
 <script></script>
+<!-- Click-Tracking fuer Nutzerfluss (GA4) -->
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+
+  function cleanText(el) {
+    return (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100);
+  }
+
+  function sectionOf(el) {
+    var s = el.closest('section[id]');
+    if (s) return s.id;
+    s = el.closest('section[class]');
+    if (s) return s.className.split(' ')[0];
+    return '';
+  }
+
+  function ctaStyle(el) {
+    var cl = el.classList;
+    if (cl.contains('btn-whatsapp')) return 'whatsapp';
+    if (cl.contains('btn-primary')) return 'primary';
+    if (cl.contains('btn-accent')) return 'accent';
+    if (cl.contains('btn-outline')) return 'outline';
+    if (cl.contains('btn-ghost')) return 'ghost';
+    return 'other';
+  }
+
+  function send(name, params) {
+    try { gtag('event', name, params); } catch (e) {}
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a, button');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = cleanText(el);
+    var path = location.pathname;
+    var section = sectionOf(el);
+
+    if (href.indexOf('tel:') === 0) {
+      send('phone_click', { link_text: text, phone_number: href.slice(4), page_path: path, section: section });
+    } else if (href.indexOf('https://wa.me/') === 0 || href.indexOf('http://wa.me/') === 0) {
+      send('whatsapp_click', { link_text: text, page_path: path, section: section });
+    } else if (href.indexOf('mailto:') === 0) {
+      send('email_click', { link_text: text, page_path: path, section: section });
+    } else if (el.closest('.nav-links') || el.classList.contains('logo') || el.classList.contains('back-link')) {
+      send('nav_click', { link_text: text, link_url: href, page_path: path });
+    } else if (el.closest('footer')) {
+      send('footer_click', { link_text: text, link_url: href, page_path: path });
+    } else if (el.classList.contains('btn')) {
+      send('cta_click', { link_text: text, link_url: href, cta_style: ctaStyle(el), page_path: path, section: section });
+    }
+  });
+
+  // FAQ-Akkordeon: welche Fragen werden geöffnet
+  document.querySelectorAll('details.faq-item').forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (!item.open) return;
+      var q = item.querySelector('summary');
+      send('faq_toggle', { question: q ? cleanText(q) : '', page_path: location.pathname });
+    });
+  });
+
+  // Preisrechner: Art, Fläche, Ausstattungslinie
+  var calcType = document.getElementById('calc-type');
+  if (calcType) calcType.addEventListener('change', function () {
+    send('calculator_interaction', { field: 'type', value: calcType.value, page_path: location.pathname });
+  });
+  var calcSize = document.getElementById('calc-size');
+  if (calcSize) calcSize.addEventListener('change', function () {
+    send('calculator_interaction', { field: 'size', value: calcSize.value, page_path: location.pathname });
+  });
+  var calcLevelGroup = document.getElementById('calc-level');
+  if (calcLevelGroup) calcLevelGroup.addEventListener('click', function (e) {
+    var btn = e.target.closest('button');
+    if (!btn) return;
+    send('calculator_interaction', { field: 'level', value: btn.dataset.value || cleanText(btn), page_path: location.pathname });
+  });
+
+  // Formular-Absenden
+  document.querySelectorAll('form').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      send('form_submit', { form_id: form.id || form.className || 'form', page_path: location.pathname });
+    });
+  });
+})();
+</script>
 </body>
 </html>
