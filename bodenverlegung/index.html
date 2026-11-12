@@ -1769,7 +1769,7 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
   // Formular-Absenden
   document.querySelectorAll('form').forEach(function (form) {
     form.addEventListener('submit', function () {
-      send('form_submit', { form_id: form.id || form.className || 'form', page_path: location.pathname });
+      send('lead_form_submit', { form_id: form.id || form.className || 'form', page_path: location.pathname });
     });
   });
 })();
